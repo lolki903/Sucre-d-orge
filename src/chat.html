@@ -57,7 +57,7 @@ let messages = document.getElementById("messages");
 let chatState = 1;
 
 
-function bonjour(userSay) {
+function askMessage(userSay) {
     if(userSay.toLowerCase().includes("")) {
         showMessageBot("Sucre d'Orge", "Super! le destinaire sera super content!");
     }
@@ -134,7 +134,7 @@ myForm.addEventListener("submit", function(e) {
         } else {
             switch(chatState) {
                 case 1:
-                    bonjour(userSay);
+                    askMessage(userSay);
                     chatState = 2;
                     break;
                 case 2:
