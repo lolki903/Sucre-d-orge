@@ -59,9 +59,9 @@ let chatState = 1;
 
 function bonjour(userSay) {
     if(userSay.toLowerCase().includes("")) {
-        showMessageBot("Bot", "Super! le destinaire sera super content!");
+        showMessageBot("Sucre d'Orge", "Super! le destinaire sera super content!");
     }
-    showMessageBot("Bot", "Quel message souhaites-tu envoyer ?");
+    showMessageBot("Sucre d'Orge", "Quel message souhaites-tu lui envoyer ?");
 }
 
 function getFormatedDate() {
@@ -85,7 +85,7 @@ function showMessageUser(message) {
     let dateMessage = getFormatedDate();
 
     let messageUser = document.createElement("div");
-    messageUser.innerHTML = '<div class="messagesRecus col-6"><div class="card"><h5 class="card-header bg-danger text-white"><img id="avatarBot" class="col-1 row mt-1 col-1 rounded-circle" src='+avatarURL+' class="img-fluid" alt="hero"><span class="headerText">Moi</span><span class="headerDateHour">'+dateMessage+'</span></h5><div class="card-body"><h5 class="card-title"></h5><div id="messages">'+message+'</div></div></div>';
+    messageUser.innerHTML = '<div class="messagesRecus col-6"><div class="card"><h5 class="card-header bg-danger text-white"><img id="avatarBot" class="col-1 row mt-1 col-1 rounded-circle" src='+avatarURL+' class="img-fluid"><span class="headerText">Moi</span><span class="headerDateHour">'+dateMessage+'</span></h5><div class="card-body"><h5 class="card-title"></h5><div id="messages">'+message+'</div></div></div>';
     barSendMessages.appendChild(messageUser);
     window.scrollTo(0,document.body.scrollHeight);
 }
@@ -111,15 +111,13 @@ function choixAvatar(botName) {
     return avatarURL;
 }
 
-function choixApi(userSay) {
+function messageUser(userSay) {
 
-    if(userSay.toLowerCase().includes("film")) {
-        showMessageBot("Superman", "J'ai compris que vous vouliez des informations sur un film.");
-        showMessageBot("Superman", "Quel film souhaitez-vous chercher ?");
-        chatState=3;
+    if(userSay.toLowerCase().includes("")) {
+        showMessageBot("Sucre d'Orge", "C'est bien noté! Ton ami(e) recevra bientôt son sucre d'orge.");
+        chatState=2;
     }
 }
-
 
 myForm.addEventListener("submit", function(e) {
     e.preventDefault()
@@ -140,21 +138,9 @@ myForm.addEventListener("submit", function(e) {
                     chatState = 2;
                     break;
                 case 2:
-                    choixApi(userSay);
-                    //Fonction choix api
+                    messageUser(userSay);
                     break;
-                case 3:
-                    botMovie(userSay);
-                    //Fonction movies
-                    break;
-                case 4:
-                    botBitcoin(userSay);
-                    //Fonction bitcoin
-                    break;
-                case 5:
-                    botEvent(userSay)
-                    //Fonction event
-                    break;
+     
                 }
         }
     }
