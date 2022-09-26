@@ -1,0 +1,28 @@
+
+.formSend {
+    position: fixed;
+    bottom: 0px;
+    left: 30px;
+    z-index: 99;
+}
+
+.barSendMessages {
+    height:80vh;
+}
+
+.messagesRecus {
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.messagesRecus {
+    position: relative;
+    margin-left: 380px;
+}
+
+#myForm {
+    position: fixed;
+    bottom: 0px;
+    left: 30px;
+    z-index: 99;
+}
