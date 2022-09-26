@@ -50,7 +50,7 @@
     </div>
 <script>
 
-showMessageBot("Bot", "Bonjour, a qui souhaitez-vous envoyer votre sucre d'orge ?");
+showMessageBot("Sucre d'Orge", "Bonjour, a qui souhaites-tu envoyer ton sucre d'orge ? (donne son nom et son prenom)");
 let myForm = document.getElementById("myForm");
 let messages = document.getElementById("messages");
 
@@ -58,21 +58,10 @@ let chatState = 1;
 
 
 function bonjour(userSay) {
-    if(userSay.toLowerCase().includes("oui")) {
-        showMessageBot("Bot", "Je suis heureux de l'apprendre !");
+    if(userSay.toLowerCase().includes("")) {
+        showMessageBot("Bot", "Super! le destinaire sera super content!");
     }
-    else if(userSay.toLowerCase().includes("non")) {
-        showMessageBot("Bot", "J'espère vous remonter le moral.");
-    } 
-    else {
-        showMessageBot("Bot", "Je n'ai pas compris votre réponse. Tapez 'Aide' pour plus d'informations");
-    }
-    
-    showMessageBot("Bot", "Comment puis-je vous aider ?");
-}
-
-function aide(userSay) {
-    showMessageBot("Bot", "Répondez à la question \"Comment allez-vous aujourd'hui ?\" par \"oui\" ou par \"non\". <br>Demandez des informations sur un film en tapant \"film\". <br>Demandez des données sur la cryptomonnaie Bitcoin en tapant \"bitcoin\". <br>Demandez la liste des évènements se déroulant à Paris en tapant \"events\".");
+    showMessageBot("Bot", "Quel message souhaites-tu envoyer ?");
 }
 
 function getFormatedDate() {
@@ -92,7 +81,7 @@ function getFormatedDate() {
 
 function showMessageUser(message) {
     let barSendMessages = document.getElementById("barSendMessages");
-    let avatarURL = "images/persona.jpg";
+    let avatarURL = "ihttps://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/2048px-User-avatar.svg.png";
     let dateMessage = getFormatedDate();
 
     let messageUser = document.createElement("div");
@@ -101,38 +90,24 @@ function showMessageUser(message) {
     window.scrollTo(0,document.body.scrollHeight);
 }
 
-
 function showMessageBot(botName, message) {
     let barSendMessages = document.getElementById("barSendMessages");
     let avatarURL = choixAvatar(botName);
     let dateMessage = getFormatedDate();
 
     let messageBot = document.createElement("div");
-    messageBot.innerHTML = '<div class="col-6"><div class="card"><h5 class="card-header bg-info" id="headerText"><img id="avatarBot" class="col-1 row mt-1 col-1 rounded-circle" src='+avatarURL+' class="img-fluid" alt="hero"><span class="headerText">'+botName+'</span><span class="headerDateHour">'+dateMessage+'</span></h5></div><div class="card-body"><p>'+message+'</p></div></div>';
+    messageBot.innerHTML = '<div class="col-6"><div class="card"><h5 class="card-header bg-light" id="headerText"><img id="avatarBot" class="col-1 row mt-1 col-1 rounded-circle" src='+avatarURL+' class="img-fluid" alt="hero"><span class="headerText">'+botName+'</span><span class="headerDateHour">'+dateMessage+'</span></h5></div><div class="card-body"><p>'+message+'</p></div></div>';
     barSendMessages.appendChild(messageBot);
     window.scrollTo(0,document.body.scrollHeight);
 }
 
 function choixAvatar(botName) {
     let avatarURL;
-    let avatarSupermanURL = "images/superman.jpg";
-    let avatarWonderURL ="images/wonder.jpg";
-    let avatarBatmanURL = "images/batman.jpeg";
-    let avatarDefault = "images/spider.jpg";
+    let avatarSucreOrgeURL = "https://www.decoagogo.fr/media/catalog/product/cache/13/image/9df78eab33525d08d6e5fb8d27136e95/r/a/raumdeko_rot_wei_e_zuckerstange.jpg";
 
-    if(botName=="Superman") {
-        avatarURL=avatarSupermanURL;
+    if(botName=="Sucre d'Orge") {
+        avatarURL=avatarSucreOrgeURL;
     }
-    else if(botName=="Wonderwoman") {
-        avatarURL=avatarWonderURL;
-    }
-    else if(botName=="Batman") {
-        avatarURL=avatarBatmanURL;
-    }
-    else {
-        avatarURL= avatarDefault;
-    }
-
     return avatarURL;
 }
 
@@ -142,16 +117,6 @@ function choixApi(userSay) {
         showMessageBot("Superman", "J'ai compris que vous vouliez des informations sur un film.");
         showMessageBot("Superman", "Quel film souhaitez-vous chercher ?");
         chatState=3;
-    } else if(userSay.toLowerCase().includes("bitcoin")) {
-        showMessageBot("Wonderwoman", "J'ai compris que vous vouliez connaître le prix actuel du Bitcoin.");
-        chatState=4;
-        botBitcoin();
-    } else if(userSay.toLowerCase().includes("events")) {
-        showMessageBot("Batman", "J'ai compris que vous vouliez connaître les évènements se déroulant dans Paris.");
-        chatState=5;
-        botEvent();
-    } else {
-        showMessageBot("Bot", "Je n'ai pas compris votre réponse. Tapez 'Aide' pour plus d'informations");
     }
 }
 
@@ -194,13 +159,6 @@ myForm.addEventListener("submit", function(e) {
         }
     }
 });
-
- 
-
-
-
-
-
 
 </script>
 </body>
