@@ -85,7 +85,7 @@ function showMessageUser(message) {
     let dateMessage = getFormatedDate();
 
     let messageUser = document.createElement("div");
-    messageUser.innerHTML = '<div class="messagesRecus col-6"><div class="card"><h5 class="card-header bg-danger text-white"><img id="avatarBot" class="col-1 row mt-1 col-1 rounded-circle" src='+avatarURL+' class="img-fluid"><span class="headerText">Moi</span><span class="headerDateHour">  '+dateMessage+'</span></h5><div class="card-body"><h5 class="card-title"></h5><div id="messages">'+message+'</div></div></div>';
+    messageUser.innerHTML = '<div class="messagesRecus col-6"><div class="card"><h5 class="card-header bg-danger text-white"><img id="avatarBot" class="col-1 row mt-1 col-1 rounded-circle" src='+avatarURL+' class="img-fluid"><span class="headerText">Moi</span><span class="headerDateHour"> - '+dateMessage+'</span></h5><div class="card-body"><h5 class="card-title"></h5><div id="messages">'+message+'</div></div></div>';
     barSendMessages.appendChild(messageUser);
     window.scrollTo(0,document.body.scrollHeight);
 }
@@ -96,7 +96,7 @@ function showMessageBot(botName, message) {
     let dateMessage = getFormatedDate();
 
     let messageBot = document.createElement("div");
-    messageBot.innerHTML = '<div class="col-6"><div class="card"><h5 class="card-header bg-light" id="headerText"><img id="avatarBot" class="col-1 row mt-1 col-1 rounded-circle" src='+avatarURL+' class="img-fluid" alt="hero"><span class="headerText">'+botName+' dit </span><span class="headerDateHour">  '+dateMessage+'</span></h5></div><div class="card-body"><p>'+message+'</p></div></div>';
+    messageBot.innerHTML = '<div class="col-6"><div class="card"><h5 class="card-header bg-light" id="headerText"><img id="avatarBot" class="col-1 row mt-1 col-1 rounded-circle" src='+avatarURL+' class="img-fluid" alt="hero"><span class="headerText">'+botName+' - </span><span class="headerDateHour">  '+dateMessage+'</span></h5></div><div class="card-body"><p>'+message+'</p></div></div>';
     barSendMessages.appendChild(messageBot);
     window.scrollTo(0,document.body.scrollHeight);
 }
@@ -119,17 +119,18 @@ function messageUser(userSay) {
     }
 }
 
-function aide(userSay) {
-    showMessageBot("Sucre d'Orge", "Donne le nom et le prenom de la personne à qui tu veux envoyer ton sucre d'orge, ou écris ton message ");
-}
-
 function stopMessage(userSay) {
 
-    if(userSay.toLowerCase().includes("")) {
-        showMessageBot("Sucre d'Orge", "Vous ne pouvez plus envoyer de sucre d'orge!");
-        chatState=3;
-    }
+if(userSay.toLowerCase().includes("")) {
+    showMessageBot("Sucre d'Orge", "Vous ne pouvez plus envoyer de sucre d'orge!");
+    chatState=3;
 }
+}
+
+function aide(userSay) {
+    showMessageBot("Sucre d'Orge", "Donne le nom et le prenom de la personne à qui tu veux envoyer ton sucre d'orge, ou écris ton message. Tu peux envoyer 1 seul sucre d'orge ");
+}
+
 
 myForm.addEventListener("submit", function(e) {
     e.preventDefault()
@@ -151,6 +152,7 @@ myForm.addEventListener("submit", function(e) {
                     break;
                 case 2:
                     messageUser(userSay);
+                    chatState = 3;
                     break;
                 case 3:
                     stopMessage(userSay);
