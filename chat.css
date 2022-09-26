@@ -1,3 +1,11 @@
+
+.formSend {
+    position: fixed;
+    bottom: 0px;
+    left: 30px;
+    z-index: 99;
+}
+
 .barSendMessages {
     height:80vh;
 }
@@ -12,35 +20,9 @@
     margin-left: 380px;
 }
 
-.posterMovie {
-    height:35%;
-    width:35% ;
-}
-
-.formSend {
+#myForm {
     position: fixed;
     bottom: 0px;
     left: 30px;
     z-index: 99;
-}
-
-.headerCard {
-    display: flex;
-}
-
-#avatarBot {
-    width: 60px;
-    float: left;
-}
-
-.headerText {
-    position: relative;
-    top: 18px;
-    left: 25px;
-}
-
-.headerDateHour {
-    position: relative;
-    top: 18px;
-    left: 45px;
 }
