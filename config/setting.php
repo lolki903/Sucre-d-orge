@@ -37,11 +37,11 @@ try{
 //FUNCTION
 //On crré une fontion qui va crypt le mot de passe user
  function crypt_password($p){
- 	$step1 =hash('sha512', $p);
+ 	$step1 = hash('sha512', $p);
 
  	$step2 ='%cbkejbccec*aejc'.$step1;
 
- 	$step3 =hash('sha512', $step2);
+ 	$step3 = hash('sha512', $step2);
 
  	return $step3;
  }

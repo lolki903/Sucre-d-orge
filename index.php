@@ -23,7 +23,7 @@ include('config/setting.php');
 			</p>
 			</div>
 			<p>
-				<input type="email" name="form_email" id="email" placeholder="Email">
+				<input style="tex-align:right;" type="text" name="form_email" id="email" placeholder="@my-digital-school.org">
 
 			</p>
 			<p>

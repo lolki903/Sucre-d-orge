@@ -40,7 +40,7 @@ $add=$db->prepare('INSERT INTO user ( lastname, firstname, email, password, type
 $add->execute([
 ':l'=>$_POST['form_nom'],
 ':f'=>$_POST['form_prenom'],
-':e'=>$_POST['form_email'],
+':e'=>$_POST['form_email'].'@my-digital-school.org',
 ':p'=>crypt_password($_POST['form_motdepasse']),
 ':j'=> 0
 ]);
@@ -69,5 +69,5 @@ if (empty($_POST)) {
 
 flash_in('sucess','bienvenue');
 //Si tout le scripts a été executer correctement nous redirecger vers la page d'accueil
-header('Location: ../');
+header('Location: ../home.php');
 exit();
