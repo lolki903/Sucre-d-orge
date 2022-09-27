@@ -1,6 +1,12 @@
 <?php 
-include('../config/setting.php');
-include('../core/login.php')
+//include('config/setting.php');
+session_start();
+$lastname = $_SESSION['lastname'];
+$firstname = $_SESSION['firstname'];
+
+if($_SESSION['lastname'] == null){
+    header('Location: /login.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,6 +17,6 @@ include('../core/login.php')
     <title>Document</title>
 </head>
 <body>
-    <p>HELLOOOOOO <?php echo $_SESSION['user']; ?></p>
+    <p>HELLOOOOOO <?php echo $firstname; ?></p>
 </body>
 </html>

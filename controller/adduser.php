@@ -45,14 +45,11 @@ $add->execute([
 ':j'=> 0
 ]);
 
-if (empty($_POST)) {
-	$error=true;
-	flash_in('error','Non !');
-}else{
+
 	//variable pour lire les elements dans la base de données puis association de l'input avec les données  voulu
 	$search =$db->prepare('SELECT * FROM user WHERE email = :u AND password = :p');
 	$search->execute([
-		':u'=>$_POST['form_email'],
+		':u'=>$_POST['form_email'].'@my-digital-school.org',
 		':p'=>crypt_password($_POST['form_motdepasse']),
 	]);
 	//Si la variaable search ne contient aucune ligne alors une error si produira
@@ -62,12 +59,13 @@ if (empty($_POST)) {
 	}else{
 		//Sinon cration de la variable data qui aura pour function de chercher les information demander dans la base de donnée
 		$data =$search->fetch(PDO::FETCH_ASSOC);
-
-		$_SESSION['user'] = $data;
+		$_SESSION['lastname'] = $data['lastname'];
+		$_SESSION['firstname'] = $data['firstname'];
 	}
-}
+
 
 flash_in('sucess','bienvenue');
 //Si tout le scripts a été executer correctement nous redirecger vers la page d'accueil
-header('Location: ../home.php');
-exit();
+header('Location: ../index.php');
+
+include('../view/inscription.php');

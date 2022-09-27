@@ -1,8 +1,3 @@
-<?php 
-//setting
-include('config/setting.php');
- ?>
- 
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +9,7 @@ include('config/setting.php');
 		<form action="core/login.php" method="POST">
 			<h1>Se connecter</h1>
 			<p>
-				<input type="text" name="form_email" placeholder="Email" id="coemail" required  >
+				<input type="text" name="form_email" placeholder="Email" id="coemail" required  > @my-digital-school.org
 			</p>
 			<p>
 				<input type="password" name="form_motdepasse" id="copassword" placeholder="mot de passe" required >
@@ -22,7 +17,9 @@ include('config/setting.php');
 
 			<p>
 				<button id="bouton" type="submit">Se connecter</button>
+				<a href="inscription.php">S'inscrire</a>
 			</p>
+			<p> <?php echo $message; ?></p>
 		</form>
 	</main>
 </body>
