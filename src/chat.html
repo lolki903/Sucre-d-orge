@@ -43,18 +43,45 @@
         <div id="barSendMessages" class="row">
         </div>
             <!-- typing message-->
-            <form id="myForm" class="fixed-bottom">
+            <form autocomplete = "off" id="myForm" class="fixed-bottom">
                 <div class="typing-message row">
                     <div class="col-9">
                         <div class="input-group mb-3 center justify-content-left">
-                            <input type="text" id="searchBar" placeholder="Votre message" value="" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <input type="text" id="input" placeholder="Votre message" value="" aria-label="Recipient's username" aria-describedby="basic-addon2">
                             <button type="submit" class="btn btn-danger">Envoyer</button>
                         </div>
                     </div>
+                    <ul class="list"></ul>
                 </div>
             </form>
     </div>
 <script>
+
+//autocomplet names
+let names = ["Julie", "Sarah", "Julien", "Nicolas"];
+let sortedNames = names.sort();
+
+let input = document.getElementById("input");
+
+input.addEventListener("keyup", (e) => {
+
+for(let i of sortedNames) {
+    if(i.toLowerCase().startsWith(input.value.toLocaleLowerCase()) && input.value != "") {
+        let listItem = document.createElement("li");
+        listItem.classList.add("list-items");
+        listItem.style.cursor = "pointer";
+        listItem.setAttribute("onclick", "displayNames('"+ i + "')");
+
+        let word = "<b>" + i.substr(0, input.value.length) + "</b>";
+        word += i.substr(input.value.length);
+        console.log(word);
+    }
+}
+});
+function displayNames(value) {
+    input.value = value; 
+}
+
 
 showMessageBot("Sucre d'Orge", "Bonjour, a qui souhaites-tu envoyer ton sucre d'orge ? (donne son nom et son prenom)");
 let myForm = document.getElementById("myForm");
@@ -140,10 +167,9 @@ function aide(userSay) {
 
 myForm.addEventListener("submit", function(e) {
     e.preventDefault()
-    let searchBar= document.getElementById("searchBar");
-    console.log(searchBar.value);
+    let searchBar= document.getElementById("input");
     let userSay = searchBar.value;
-    document.getElementById("searchBar").value = "";
+    document.getElementById("input").value = "";
 
     if(userSay.length!==0) {
         showMessageUser(userSay);
