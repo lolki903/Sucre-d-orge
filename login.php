@@ -7,7 +7,7 @@ include('config/setting.php');
 <html>
 <head>
 <link rel="stylesheet" href="connexion.css">
-	<title>Se connecter</title>
+	<title>Se connecter</title> 
 </head>
 <body>
 

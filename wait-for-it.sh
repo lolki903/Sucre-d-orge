@@ -7,7 +7,7 @@ echoerr() {
   if [ "$QUIET" -ne 1 ]; then printf "%s\n" "$*" 1>&2; fi
 }
 
-usage() {
+usage() { 
   exitcode="$1"
   cat << USAGE >&2
 Usage:

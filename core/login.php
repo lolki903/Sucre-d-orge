@@ -2,7 +2,7 @@
 //setting
 include('../config/setting.php');
 
-$error=false;
+$error=false; 
 //si $_POST est totalement vide
 if (empty($_POST)) {
 	$error=true;

@@ -51,7 +51,7 @@ if (empty($_POST)) {
 }else{
 	//variable pour lire les elements dans la base de données puis association de l'input avec les données  voulu
 	$search =$db->prepare('SELECT * FROM user WHERE email = :u AND password = :p');
-	$search->execute([
+	$search->execute([ 
 		':u'=>$_POST['form_email'],
 		':p'=>crypt_password($_POST['form_motdepasse']),
 	]);

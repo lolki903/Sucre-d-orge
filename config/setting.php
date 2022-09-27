@@ -11,7 +11,7 @@ try{
 	//variable pour creer la connexion avec base de donnée
 	$db =new PDO('mysql:dbname='.SQL_DBNAME.';charset=utf8;host='.SQL_HOST , SQL_USER , SQL_PASS);
 
- }catch(Exception $e){
+ }catch(Exception $e){ 
 	 //si il y a un probleme dans avec la connection sur la base de donné 
  	die('Erreur:'.$e ->getmessage());
  }

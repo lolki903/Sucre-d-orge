@@ -43,7 +43,7 @@ include('config/setting.php');
 			<p>
 				<button type="submit" id="bouto">CRÉATION DU COMPTE</button>
 			</p>
-		</form>
+		</form> 
 		</div>
 	</div>
 	</main>
