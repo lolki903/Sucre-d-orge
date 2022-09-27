@@ -2,7 +2,7 @@
 .formSend {
     position: fixed;
     bottom: 0px;
-    left: 30px;
+    left: 10px;
     z-index: 99;
 }
 
@@ -23,7 +23,7 @@
 #myForm {
     position: fixed;
     bottom: 0px;
-    left: 30px;
+    left: 10px;
     z-index: 99;
 }
 
