@@ -9,3 +9,8 @@
 172.26.0.1 - - [27/Sep/2022:14:08:53 +0000] "GET / HTTP/1.1" 200 66 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:105.0) Gecko/20100101 Firefox/105.0"
 172.26.0.1 - - [27/Sep/2022:14:09:10 +0000] "GET / HTTP/1.1" 200 66 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:105.0) Gecko/20100101 Firefox/105.0"
 172.26.0.1 - - [27/Sep/2022:14:09:11 +0000] "GET / HTTP/1.1" 200 66 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:105.0) Gecko/20100101 Firefox/105.0"
+172.26.0.1 - - [27/Sep/2022:14:38:11 +0000] "GET / HTTP/1.1" 200 792 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:105.0) Gecko/20100101 Firefox/105.0"
+172.27.0.1 - - [27/Sep/2022:14:41:23 +0000] "GET / HTTP/1.1" 200 66 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:105.0) Gecko/20100101 Firefox/105.0"
+172.27.0.1 - - [27/Sep/2022:14:41:25 +0000] "GET / HTTP/1.1" 200 66 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:105.0) Gecko/20100101 Firefox/105.0"
+172.27.0.1 - - [27/Sep/2022:14:41:34 +0000] "GET / HTTP/1.1" 200 66 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:105.0) Gecko/20100101 Firefox/105.0"
+172.27.0.1 - - [27/Sep/2022:14:41:35 +0000] "GET / HTTP/1.1" 200 66 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:105.0) Gecko/20100101 Firefox/105.0"
