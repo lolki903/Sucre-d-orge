@@ -10,8 +10,6 @@ include('config/setting.php');
 	<title>Se connecter</title>
 </head>
 <body>
-	<?php include('includes/header.php') ?>
-
 	<main class="se_connecter">
 		<form action="core/login.php" method="POST">
 			<h1>Se connecter</h1>

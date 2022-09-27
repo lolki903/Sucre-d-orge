@@ -28,11 +28,13 @@ if (empty($_POST)) {
 	}
 }
 //Si une erreur se produit pendant le script redirection immédiat vers la page login
-if ($error) 
+if ($error) {
 	header('Location: ../login.php');
+}
 
-else
-	header('Location: ../home.php');
+else{
+	header('Location: ../home.php');	
+}
 	
 
 exit();

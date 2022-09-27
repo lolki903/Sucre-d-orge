@@ -5,7 +5,7 @@ session_start();
 //Pour se connecter a la base de données
 define('SQL_HOST', 'localhost');
 define('SQL_USER', 'root');
-define('SQL_PASS', 'root');
+define('SQL_PASS', '');
 define('SQL_DBNAME', 'sucre-orge');
 try{
 	//variable pour creer la connexion avec base de donnée
