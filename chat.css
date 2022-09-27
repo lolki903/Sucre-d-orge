@@ -1,0 +1,53 @@
+
+.formSend {
+    position: fixed;
+    bottom: 0px;
+    left: 10px;
+    z-index: 99;
+}
+
+.barSendMessages {
+    height:80vh;
+}
+
+.messagesRecus {
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.messagesRecus {
+    position: relative;
+    margin-left: 380px;
+}
+
+#myForm {
+    position: fixed;
+    bottom: 0px;
+    left: 10px;
+    z-index: 99;
+}
+
+.fixed-bottom {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+ul {
+    list-style: none;
+}
+.list {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 0 0 5px 5px;
+}
+
+.list-items {
+    padding: 10px 5px;
+}
+
+.list-items:hover {
+    background-color: #dddd;
+}

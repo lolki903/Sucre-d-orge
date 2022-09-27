@@ -12,7 +12,7 @@
 		<h1>CREER UN COMPTE </h1>
 		<div class="main-agileinfo">
 		<div class="agileits-top">
-		<form action="core/adduser.php" method="POST">
+		<form action="controller/adduser.php" method="POST">
 			<div>
 			<p>
 				<input class="text" type="text" name="form_nom" placeholder="Nom" class="name fr" >
