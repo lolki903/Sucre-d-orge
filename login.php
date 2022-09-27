@@ -6,24 +6,24 @@ include('config/setting.php');
 <!DOCTYPE html>
 <html>
 <head>
-	
+<link rel="stylesheet" href="connexion.css">
 	<title>Se connecter</title>
 </head>
 <body>
-	<?php include('includes/header.php') ?>
 
-	<main class="se_connecter">
+	<main class="login-form">
 		<form action="core/login.php" method="POST">
 			<h1>Se connecter</h1>
-			<p>
+         <div class="content">
+			<div class="input-field">
 				<input type="text" name="form_email" placeholder="Email" id="coemail" required  >
-			</p>
-			<p>
+            </div>
+			<div class="input-field">
 				<input type="password" name="form_motdepasse" id="copassword" placeholder="mot de passe" required >
-			</p>
-
-			<p>
-				<button id="bouton" type="submit">Se connecter</button>
+            </div>
+            </div>
+			<p class="action">
+				<button  type="submit">Se connecter</button>
 			</p>
 		</form>
 	</main>
