@@ -4,8 +4,9 @@ session_start();
 $lastname = $_SESSION['lastname'];
 $firstname = $_SESSION['firstname'];
 
-if($_SESSION['lastname'] == null){
-    header('Location: /login.php');
+var_dump($lastname);
+if($_SESSION['lastname'] == null || $_SESSION['lastname'] == ""){
+    header('Location: /controller/login.php');
 }
 ?>
 <!DOCTYPE html>

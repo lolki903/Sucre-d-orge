@@ -35,7 +35,7 @@ if ($error) {
 }
 
 else{
-	header('Location: ../view/index.php');	
+	header('Location: ../index.php');	
 }
 
 include('../view/login.php');
