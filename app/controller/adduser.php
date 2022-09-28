@@ -2,6 +2,7 @@
 //on importe le setting
 include('../config/setting.php');
 
+if (isset($_POST['valider'])){
 $error =false;
 //si $_POST est totalement vide
 	if (empty($_POST)) {
@@ -20,10 +21,7 @@ $error =false;
 		$error =true;
 	}
 	}
-	if ($error) {
-		header('Location: ../adduser.php');
-		exit();
-}
+	
 // Si il n'y a pas de contenu dans l'input lui par defaut la valleur null
 if(empty($_POST['form_nom']))
 	$_POST['form_nom']=null;
@@ -67,5 +65,7 @@ $add->execute([
 flash_in('sucess','bienvenue');
 //Si tout le scripts a été executer correctement nous redirecger vers la page d'accueil
 header('Location: ../index.php');
+
+}
 
 include('../view/inscription.php');

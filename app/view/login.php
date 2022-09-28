@@ -6,7 +6,7 @@
 </head>
 <body>
 	<main class="se_connecter">
-		<form action="core/login.php" method="POST">
+		<form method="POST">
 			<h1>Se connecter</h1>
 			<p>
 				<input type="text" name="form_email" placeholder="Email" id="coemail" required  > @my-digital-school.org
@@ -17,7 +17,7 @@
 
 			<p>
 				<button id="bouton" type="submit">Se connecter</button>
-				<a href="inscription.php">S'inscrire</a>
+				<a href="adduser.php">S'inscrire</a>
 			</p>
 			<p> <?php echo $message; ?></p>
 		</form>
