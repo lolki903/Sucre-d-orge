@@ -1,5 +1,5 @@
 <?php 
-//include('config/setting.php');
+include('config/setting.php');
 session_start();
 $lastname = $_SESSION['lastname'];
 $firstname = $_SESSION['firstname'];

@@ -9,6 +9,7 @@
 172.26.0.1 - - [27/Sep/2022:14:08:53 +0000] "GET / HTTP/1.1" 200 66 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:105.0) Gecko/20100101 Firefox/105.0"
 172.26.0.1 - - [27/Sep/2022:14:09:10 +0000] "GET / HTTP/1.1" 200 66 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:105.0) Gecko/20100101 Firefox/105.0"
 172.26.0.1 - - [27/Sep/2022:14:09:11 +0000] "GET / HTTP/1.1" 200 66 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:105.0) Gecko/20100101 Firefox/105.0"
+<<<<<<< HEAD
 172.18.0.1 - - [27/Sep/2022:14:49:49 +0000] "GET / HTTP/1.1" 200 804 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36"
 172.18.0.1 - - [28/Sep/2022:07:17:50 +0000] "GET / HTTP/1.1" 200 804 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36"
 172.18.0.1 - - [28/Sep/2022:07:18:37 +0000] "GET / HTTP/1.1" 200 804 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36"
@@ -337,3 +338,10 @@
 172.18.0.1 - - [28/Sep/2022:07:47:10 +0000] "GET /favicon.ico HTTP/1.1" 200 321 "http://localhost/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36"
 172.18.0.1 - - [28/Sep/2022:07:47:25 +0000] "GET /index.php HTTP/1.1" 200 321 "http://localhost/controller/adduser.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36"
 172.18.0.1 - - [28/Sep/2022:07:47:25 +0000] "GET /favicon.ico HTTP/1.1" 200 321 "http://localhost/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36"
+=======
+172.26.0.1 - - [27/Sep/2022:14:38:11 +0000] "GET / HTTP/1.1" 200 792 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:105.0) Gecko/20100101 Firefox/105.0"
+172.27.0.1 - - [27/Sep/2022:14:41:23 +0000] "GET / HTTP/1.1" 200 66 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:105.0) Gecko/20100101 Firefox/105.0"
+172.27.0.1 - - [27/Sep/2022:14:41:25 +0000] "GET / HTTP/1.1" 200 66 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:105.0) Gecko/20100101 Firefox/105.0"
+172.27.0.1 - - [27/Sep/2022:14:41:34 +0000] "GET / HTTP/1.1" 200 66 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:105.0) Gecko/20100101 Firefox/105.0"
+172.27.0.1 - - [27/Sep/2022:14:41:35 +0000] "GET / HTTP/1.1" 200 66 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:105.0) Gecko/20100101 Firefox/105.0"
+>>>>>>> adf6a779ba11787031042220b995c53c11039e7d
