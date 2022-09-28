@@ -13,6 +13,9 @@
             <form class="form-inline">
               <button class="btn btn-outline-light" type="button">Administrateurs</button>
             </form>
+            <div class="logo">
+                <img src="src/images/logo.gif" alt="this slowpoke moves"  width="100" />
+            </div>
           </nav>
         <!--navbar-->
         <!--content-->
@@ -21,7 +24,7 @@
             <div class="col-3">
                 <div class="row mt-2">
                     <div class="col-4">
-                        <img width="100%" id="avatarSucre" class= "rounded-circle" src="src/images/candy.png" class="img-fluid" alt="hero">
+                        <img width="100%" id="avatarSucre" class= "" src="src/images/candy.png" class="img-fluid" alt="hero">
                     </div>
                     <div class="col-7 pt-5">
                         <h5 id="botSpider">Sucre d'orge</h5>
@@ -123,7 +126,7 @@ function getFormatedDate() {
 
 function showMessageUser(message) {
     let barSendMessages = document.getElementById("barSendMessages");
-    let avatarURL = "ihttps://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/2048px-User-avatar.svg.png";
+    let avatarURL = "src/images/santa.png";
     let dateMessage = getFormatedDate();
 
     let messageUser = document.createElement("div");
@@ -138,14 +141,14 @@ function showMessageBot(botName, message) {
     let dateMessage = getFormatedDate();
 
     let messageBot = document.createElement("div");
-    messageBot.innerHTML = '<div class="col-6"><div class="card"><h5 class="card-header bg-light" id="headerText"><img id="avatarBot" class="col-1 row mt-1 col-1 rounded-circle" src='+avatarURL+' class="img-fluid" alt="hero"><span class="headerText">'+botName+' - </span><span class="headerDateHour">  '+dateMessage+'</span></h5></div><div class="card-body"><p>'+message+'</p></div></div>';
+    messageBot.innerHTML = '<div class="col-6"><div class="card"><h5 class="card-header bg-light" id="headerText"><img id="avatarBot" class="col-1 row mt-1 col-1" src='+avatarURL+' class="img-fluid" alt="hero"><span class="headerText">'+botName+' - </span><span class="headerDateHour">  '+dateMessage+'</span></h5></div><div class="card-body"><p>'+message+'</p></div></div>';
     barSendMessages.appendChild(messageBot);
     window.scrollTo(0,document.body.scrollHeight);
 }
 
 function choixAvatar(botName) {
     let avatarURL;
-    let avatarSucreOrgeURL = "https://www.decoagogo.fr/media/catalog/product/cache/13/image/9df78eab33525d08d6e5fb8d27136e95/r/a/raumdeko_rot_wei_e_zuckerstange.jpg";
+    let avatarSucreOrgeURL = "src/images/candy.png";
 
     if(botName=="Sucre d'Orge") {
         avatarURL=avatarSucreOrgeURL;
