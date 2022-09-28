@@ -24,7 +24,8 @@ $firstname = $_SESSION['firstname'];
     <a href="/controller/disconect.php"> déconnexion</a>
 
     <?php 
-        //GetAllUsers($db);
+       $tab= GetAllUsers($db);
+
 
         
     ?>
