@@ -12,7 +12,7 @@
       <nav class="navbar navbar-expand-sm bg-dark">
       <ul class="nav nav-pills">
     <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="../view/panel.php">Liste des messages</a>
+    <a class="nav-link active" aria-current="page" href="../view/panelmsg.php">Liste des messages</a>
     </li>
     <li class="nav-item">
     <a class="nav-link" href="#">Déconnexion</a>
