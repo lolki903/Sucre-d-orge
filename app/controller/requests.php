@@ -13,9 +13,8 @@ function GetAllUsers($db){
 		$nblignes = $stmt->rowCount();
 	    if($nblignes>=1){
 			while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-				$tab[]=$row;			
+				echo"";			
 			}
-			return $tab;
 				
 		}
 
