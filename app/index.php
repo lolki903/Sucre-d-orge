@@ -1,8 +1,8 @@
 <?php 
 
 session_start();
-include('../config/setting.php');
-include('../controller/requests.php');
+//include('../config/setting.php');
+//include('../controller/requests.php');
 
 if(isset($_SESSION['lastname']) == null || isset($_SESSION['lastname']) == ""){
     header('Location: /controller/login.php');
@@ -25,7 +25,7 @@ $firstname = $_SESSION['firstname'];
     <a href="/controller/disconect.php"> déconnexion</a>
 
     <?php 
-        GetAllUsers($db);
+        //GetAllUsers($db);
 
         
     ?>
