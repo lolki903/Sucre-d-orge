@@ -1,5 +1,4 @@
 <?php 
-include('../config/setting.php');
 
 function GetAllUsers($db){
     

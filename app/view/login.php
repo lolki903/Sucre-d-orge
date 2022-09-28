@@ -1,26 +1,34 @@
+
+
 <!DOCTYPE html>
-<html>
+<html lang="en" >
 <head>
-	
-	<title>Se connecter</title>
+  <meta charset="UTF-8">
+  <title>Connexion Sucre d'orge</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'><link rel="stylesheet" href="../assets/css/connexion.css">
+
 </head>
 <body>
-	<main class="se_connecter">
-		<form method="POST">
-			<h1>Se connecter</h1>
-			<p>
-				<input type="text" name="form_email" placeholder="Email" id="coemail" required  > @my-digital-school.org
-			</p>
-			<p>
-				<input type="password" name="form_motdepasse" id="copassword" placeholder="mot de passe" required >
-			</p>
+<!-- partial:index.partial.html -->
+<div class="login-form">
+  <form method="POST">
+	
+    <h1>Vous connecter</h1>
+    <div class="content">
+      <div class="input-field">
+        <input type="email" placeholder="Email" autocomplete="nope">
+      </div>
+      <div class="input-field">
+        <input type="password" placeholder="Mot de passe" autocomplete="new-password">
+      </div>
+    </div>
+    <div class="action">
+      <button name="Valider">Connexion</button>
+	<button name="Valider">	<a href="adduser.php"> Inscription </a> </button> 
+    </div>
+  </form>			
+  <p> <?php if(isset($message) !== "" || isset($message) !== null){echo $message;}else{} ?></p>
+</div>
 
-			<p>
-				<button id="bouton" name="valider" type="submit">Se connecter</button>
-				<a href="adduser.php">S'inscrire</a>
-			</p>
-			<p> <?php if(isset($message) !== "" || isset($message) !== null){echo $message;}else{} ?></p>
-		</form>
-	</main>
 </body>
 </html>
