@@ -17,10 +17,10 @@
     <h1>Vous connecter</h1>
     <div class="content">
       <div class="input-field">
-        <input type="email" placeholder="Email" autocomplete="nope">
+        <input type="text" placeholder="Email" name="form_email" autocomplete="nope">
       </div>
       <div class="input-field">
-        <input type="password" placeholder="Mot de passe" autocomplete="new-password">
+        <input type="password" placeholder="Mot de passe" name="form_motdepasse" autocomplete="new-password">
       </div>
     </div>
     <div class="action">
