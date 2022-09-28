@@ -1,3 +1,8 @@
+<?php
+include('../config/setting.php');
+include('../controller/requests.php');
+
+?>
 <!DOCTYPE html>
 <html>
    <head>
@@ -15,7 +20,7 @@
     <a class="nav-link active" aria-current="page" href="../view/panelmsg.php">Liste des messages</a>
     </li>
     <li class="nav-item">
-    <a class="nav-link" href="#">Déconnexion</a>
+    <a class="nav-link" href="../controller/disconect.php">Déconnexion</a>
     </li>
     </ul>
       </nav>
@@ -32,24 +37,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-    
-    <td>Jadfdfqdfqsfdfqfqsfqdf</td>
-      <td>fqdfqfqdfqfqdfqdfqdn</td>
-      <td>dfnmqdfmqd@fdlqdflqdlf</td>
-    </tr>
+    <?php GetAllUsers($db); ?>
   </tbody>
 </table>
 <nav aria-label="Page de navigation">

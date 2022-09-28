@@ -9,21 +9,24 @@
 </head>
 <body class="bg-danger">
 	<?php //creation du form?>
+	<form method="POST">
 	<div class="container">
 		<div class="row justify-content-center text-center p-5">
 			<div class="card" style="width: 48rem;">
 					<div class="card-header"> S'inscrire</div>
-						<input class="form-control" type="text" placeholder="Prénom">
-						<input class="form-control" type="text" placeholder="Nom">
-						<input class="form-control" type="text" placeholder="Adresse mail">
-						<input class="form-control" type="password" placeholder="Mot de passe">
+						<input class="form-control" type="text" name="form_prenom" placeholder="Prénom" required>
+						<input class="form-control" type="text" name="form_nom" placeholder="Nom" required>
+						<input class="form-control" type="text" name="form_email" placeholder="Adresse mail" required>
+						<input class="form-control" type="password" name="form_motdepasse" placeholder="Mot de passe" required>
+						<input class="form-control" type="password" name="form_motdepasses" placeholder="Repeter le Mot de passe" required>
 			</div>
 		</div>
 	</div>
 	<div class="row justify-content-center">
-		<button type="button" class="btn btn-light btn-lg">Je m'inscris</button>
-	<a href="../view/login.php"><button type="button" class="btn btn-light btn-lg">Je me connecte</button></a>
+		<button type="submit" name="valider" class="btn btn-light btn-lg">Je m'inscris</button>
+	<a href="login.php"><button type="button" class="btn btn-light btn-lg">Je me connecte</button></a>
 	</div>
+	</form>
 </body>
 </html>
 </body>

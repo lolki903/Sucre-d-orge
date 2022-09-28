@@ -1,5 +1,32 @@
+function callSearch(str){
+			if(str.length ==0){
+				document.getElementById('result').innerHTML="Rajouter du text pour rechercher";
+                document.getElementById('result').style.display = "block";
 
-let names = ["Julie", "Sarah", "Julien", "Nicolas"];
+			}
+			else{
+				 var xmlhttp=new XMLHttpRequest();
+					xmlhttp.onreadystatechange=function() {
+					if (this.readyState==4 && this.status==200) {
+						document.getElementById('result').innerHTML=this.responseText;
+						console.log(this.responseText);
+					}
+				}
+			xmlhttp.open("GET","controller/GetUsers.php?name="+str,true);
+			xmlhttp.send();
+			
+				
+			}
+}
+
+function searchlink(content,li){;
+    let input = document.getElementById("input")
+    input.value = content;
+    let ul = document.getElementById("result");
+    ul.style.display = "none";
+}
+
+let names = [];
 let sortedNames = names.sort();
 
 let input = document.getElementById("input");
@@ -65,7 +92,7 @@ function getFormatedDate() {
 
 function showMessageUser(message) {
     let barSendMessages = document.getElementById("barSendMessages");
-    let avatarURL = "src/images/santa.png";
+    let avatarURL = "assets/images/santa.png";
     let dateMessage = getFormatedDate();
 
     let messageUser = document.createElement("div");
@@ -87,7 +114,7 @@ function showMessageBot(botName, message) {
 
 function choixAvatar(botName) {
     let avatarURL;
-    let avatarSucreOrgeURL = "src/images/candy.png";
+    let avatarSucreOrgeURL = "assets/images/candy.png";
 
     if(botName=="Sucre d'Orge") {
         avatarURL=avatarSucreOrgeURL;
@@ -115,9 +142,6 @@ function aide(userSay) {
     showMessageBot("Sucre d'Orge", "Donne le nom et le prenom de la personne à qui tu veux envoyer ton sucre d'orge, ou écris ton message. Tu peux envoyer 1 seul sucre d'orge ");
 }
 
-if(chatState == 2){
-    getElementById('btnsubmit').remove();
-}
 
 myForm.addEventListener("submit", function(e) {
     e.preventDefault()
@@ -135,10 +159,16 @@ myForm.addEventListener("submit", function(e) {
                 case 1:
                     askMessage(userSay);
                     chatState = 2;
+                    let input = document.getElementById('input');
+                    input.onkeyup = "";
                     break;
                 case 2:
                     messageUser(userSay);
                     chatState = 3;
+                    var btn = document.getElementById('btnsubmit');
+                    myForm.action ="controller/message.php";
+                     console.log(input.value);
+                    btn.remove();
                     break;
                 case 3:
                     stopMessage(userSay);
@@ -146,4 +176,4 @@ myForm.addEventListener("submit", function(e) {
                 }
         }
     }
-});
+})

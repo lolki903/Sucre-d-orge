@@ -59,6 +59,7 @@ $add->execute([
 		$data =$search->fetch(PDO::FETCH_ASSOC);
 		$_SESSION['lastname'] = $data['lastname'];
 		$_SESSION['firstname'] = $data['firstname'];
+		$_SESSION['type'] = $data['type'];
 	}
 
 

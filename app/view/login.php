@@ -17,15 +17,15 @@
     <h1>Vous connecter</h1>
     <div class="content">
       <div class="input-field">
-        <input type="text" placeholder="Email" name="form_email" autocomplete="nope">
+        <input type="text" placeholder="Email" name="form_email" autocomplete="nope" required>
       </div>
       <div class="input-field">
-        <input type="password" placeholder="Mot de passe" name="form_motdepasse" autocomplete="new-password">
+        <input type="password" placeholder="Mot de passe" name="form_motdepasse" autocomplete="new-password" required>
       </div>
     </div>
     <div class="action">
-	  <a href="../view/inscription.php"><button type="button" class="btn btn-light btn-lg">Je m'inscris</button></a>
-		<button type="button" class="btn btn-light btn-lg">Je me connecte</button>
+	  <a href="adduser.php"><button type="button" class="btn btn-light btn-lg">Je m'inscris</button></a>
+		<button type="submit" name="valider" class="btn btn-light btn-lg">Je me connecte</button>
     </div>
   </form>			
   <p> <?php if(isset($message) !== "" || isset($message) !== null){echo $message;}else{} ?></p>
