@@ -16,10 +16,10 @@
 			</p>
 
 			<p>
-				<button id="bouton" type="submit">Se connecter</button>
+				<button id="bouton" name="valider" type="submit">Se connecter</button>
 				<a href="adduser.php">S'inscrire</a>
 			</p>
-			<p> <?php echo $message; ?></p>
+			<p> <?php if(isset($message) !== "" || isset($message) !== null){echo $message;}else{} ?></p>
 		</form>
 	</main>
 </body>

@@ -1,7 +1,8 @@
 <?php 
 //setting
 include('../config/setting.php');
-
+$message= "";
+if (isset($_POST['valider'])){
 $error=false;
 //si $_POST est totalement vide
 if (empty($_POST)) {
@@ -36,6 +37,7 @@ if ($error) {
 
 else{
 	header('Location: ../index.php');	
+}
 }
 
 include('../view/login.php');

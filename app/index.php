@@ -1,12 +1,15 @@
 <?php 
-include('config/setting.php');
+
 session_start();
+include('../config/setting.php');
+include('../controller/requests.php');
+
+if(isset($_SESSION['lastname']) == null || isset($_SESSION['lastname']) == ""){
+    header('Location: /controller/login.php');
+}
+else{
 $lastname = $_SESSION['lastname'];
 $firstname = $_SESSION['firstname'];
-
-var_dump($lastname);
-if($_SESSION['lastname'] == null || $_SESSION['lastname'] == ""){
-    header('Location: /controller/login.php');
 }
 ?>
 <!DOCTYPE html>
@@ -19,5 +22,12 @@ if($_SESSION['lastname'] == null || $_SESSION['lastname'] == ""){
 </head>
 <body>
     <p>HELLOOOOOO <?php echo $firstname; ?></p>
+    <a href="/controller/disconect.php"> déconnexion</a>
+
+    <?php 
+        GetAllUsers($db);
+
+        
+    ?>
 </body>
 </html>
