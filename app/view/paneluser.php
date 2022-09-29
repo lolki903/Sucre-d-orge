@@ -17,15 +17,19 @@ include('../controller/requests.php');
       <nav class="navbar navbar-light bg-danger">
       <ul class="nav nav-pills">
     <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="../view/panelmsg.php">Liste des messages</a>
-    </li>
-    <li class="nav-item">
-    <a class="nav-link" href="../controller/disconect.php">Déconnexion</a>
+    <a class="nav-link active" aria-current="page" href="../view/panelmsg.php?page=1">Liste des messages</a>
     </li>
     <li class="nav-item">
     <a class="nav-link" href="../view/index.php">Accueil</a>
     </li>
+    <li class="nav-item">
+      
+    <a class="nav-link" href="../controller/disconect.php">Déconnexion</a>
+    </li>
     </ul>
+    <div class="logo">
+                <img src="../assets/images/logo.gif" alt="this slowpoke moves"  width="100" />
+            </div>
       </nav>
 
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
@@ -37,6 +41,7 @@ include('../controller/requests.php');
       <th scope="col">Prénom</th>
       <th scope="col">Nom</th>
       <th scope="col">Email</th>
+      <th scope="col">Actions</th>
     </tr>
   </thead>
   <tbody>

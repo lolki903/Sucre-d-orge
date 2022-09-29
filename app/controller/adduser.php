@@ -33,12 +33,12 @@ if(empty($_POST['form_email']))
 	$_POST['form_email']=null;
 
 //variable pour inserer les elements dans la base de données puis association de l'input avec la donné  voulu
-$add=$db->prepare('INSERT INTO user ( lastname, firstname, email, password, type) VALUES ( :l, :f, :e, :p, :j)');
+$add=$db->prepare('INSERT INTO user ( lastname, firstname, email, password, type) VALUES ( :l, :f, :e, :p, :j) ') ;
 
 $add->execute([
 ':l'=>$_POST['form_nom'],
 ':f'=>$_POST['form_prenom'],
-':e'=>$_POST['form_email'].'@my-digital-school.org',
+':e'=>$_POST['form_prenom'].".".$_POST['form_nom'].'@my-digital-school.org',
 ':p'=>crypt_password($_POST['form_motdepasse']),
 ':j'=> 0
 ]);

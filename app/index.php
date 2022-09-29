@@ -10,7 +10,11 @@ else{
 $lastname = $_SESSION['lastname'];
 $firstname = $_SESSION['firstname'];
 }
-
+if($_SESSION['type'] === "1"){
+    header('Location: view/panelmsg.php?page=1') ;
+}else{
+    
+}
 ?>
 
 <!doctype html>
@@ -27,21 +31,20 @@ $firstname = $_SESSION['firstname'];
     <div id="app" class="container-fluid">
         <!--navbar-->
         <nav class="navbar navbar-light bg-danger">
-            <?php 
-                if($_SESSION['type'] == 1){
-        
-                    echo "<a href='view/panelmsg.php' class='btn btn-outline-light' >Administrateurs</a>" ;
-                    }else{
-        
-                }
-            ?>
-            
-            <div class="logo">
+        <ul class="nav nav-pills">
+        <div class="logo">
                 <img src="assets/images/logo.gif" alt="this slowpoke moves"  width="100" />
             </div>
+</ul>
+    </li>
+    <button type="button" class="btn btn-light pull-right"><a href="../controller/disconect.php">Déconnexion</a></button>
+            <?php 
+                
+    
+            ?>
+            
           </nav>
           <p>HELLOOOOOO <?php echo $firstname; ?></p>
-         <a href="/controller/disconect.php"> déconnexion</a>
          
         <!--navbar-->
         <!--content-->
