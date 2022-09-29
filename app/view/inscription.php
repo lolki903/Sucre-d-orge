@@ -13,6 +13,9 @@
     <div class="snow1"></div>
     <div class="snow2"></div>
     <div class="snow3"></div>
+	<div class="snow4"></div>
+	<div class="snow5"></div>
+	<div class="snow6"></div>
 </section>
 <nav class="navbar navbar-light bg-danger">
             <div class="logo">
