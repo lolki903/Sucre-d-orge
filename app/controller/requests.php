@@ -1,8 +1,9 @@
 <?php 
 
-function GetAllUsers($db){
-
-	$req="SELECT lastname, firstname, email FROM `user`";
+function GetAllUsers($db,$parPage){
+	$start = $_GET['page'];
+	$depart = ($start - 1) * $parPage;
+	$req="SELECT lastname, firstname, email FROM `user`LIMIT $depart, $parPage";
 	$stmt = $db->prepare($req);
 	$stmt->execute();
 	if(!$stmt){
@@ -28,11 +29,15 @@ function GetAllUsers($db){
 
 
 function GetTrades($db,$parPage){
-    $start = $_GET['page'];
-	$depart = ($start - 1) * $parPage;
-	$req="SELECT trades.sender , trades.receiver ,trades.message ,trades.status , statut.type FROM `trades` LEFT JOIN statut ON trades.status = statut.id LIMIT $depart, $parPage";
+	if(isset($_GET['page'])){
+			$_GET['page'] = intval($_GET['page']);
+			$currentPage = $_GET['page'];
+		}else{
+			$currentPage = 1;
+		}
+	$depart = ($currentPage - 1) * $parPage;
+	$req="SELECT trades.sender , trades.receiver ,trades.message ,trades.status , status.type FROM `trades` LEFT JOIN status ON trades.status = status.id LIMIT $depart, $parPage";
 	$stmt = $db->prepare($req);
-	var_dump($req);
 	$stmt->execute();
 	
 	if(!$stmt){
@@ -53,7 +58,7 @@ function GetTrades($db,$parPage){
 			   if($row['type']=== "VALIDÉ"){
 					   $class= "bg bg-success";
 					  };	
-				echo "<tr> <td> $row[sender] </td> <td> $row[receiver] </td> <td> $row[message] </td> <td class='$class'>$row[type]</td></tr>";
+				echo "<tr> <td> $row[sender] </td> <td> $row[receiver] </td> <td> $row[message] </td> <td class='$class'>$row[type]</td> <td><a href='#'>valide</a>   <a href='#'>refuse</a></td></tr>";
 			}
 				
 		}

@@ -2,8 +2,9 @@
 include('../config/setting.php');
 include('../controller/requests.php');
 
-if(isset($_GET['page']) && !empty($_GET['page'])){
-  $currentPage = (int) strip_tags($_GET['page']);
+if(isset($_GET['page'])  AND $_GET['page'] > 0){
+	$_GET['page'] = intval($_GET['page']);
+	$currentPage = $_GET['page'];
 }else{
   $currentPage = 1;
 }
@@ -19,7 +20,7 @@ $query->execute();
 $result = $query->fetch();
 
 $nbArticles = (int) $result['nb_message'];
-$parPage = 10;
+$parPage = 5;
 
 // On calcule le nombre de pages total
 $pages = ceil($nbArticles / $parPage);
@@ -55,10 +56,9 @@ $articles = $query->fetchAll(PDO::FETCH_ASSOC);
       <ul class="nav nav-pills">
         
     <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="../view/paneluser.php">Liste des utilisateurs</a>
+    <a class="nav-link active" aria-current="page" href="../view/paneluser.php?page=1">Liste des utilisateurs</a>
     </li>
     <li class="nav-item">
-    <a class="nav-link" href="../view/index.php">Accueil</a>
     </li>
     <li class="nav-item">
     <a class="nav-link" href="../controller/disconect.php">Déconnexion</a>

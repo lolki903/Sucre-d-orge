@@ -24,6 +24,18 @@ if (empty($_POST)) {
 		$error=true;
 
 	}else{
+		// VERIFICATION SI LE USER A DEJA ENVOYÉ UN MESSAGE OU PAS
+		$verif = $db->prepare('SELECT * FROM trades WHERE sender = :email');
+		$verif->execute([':email'=>$email.'@my-digital-school.org']);
+
+		if ($verif->rowcount() == 0) {
+		// SI OUI LA SESSION VAUT TRUE  
+			$_SESSION['sended'] = 2;
+
+		}else{ //SINON ELLE VAUT FALSE
+			$_SESSION['sended'] = 1;
+		}
+
 		//Sinon cration de la variable data qui aura pour function de chercher les information demander dans la base de donnée
 		$data =$search->fetch(PDO::FETCH_ASSOC);
 
@@ -31,6 +43,7 @@ if (empty($_POST)) {
 		$_SESSION['lastname'] = $data['lastname'];
 		$_SESSION['firstname'] = $data['firstname'];
 		$_SESSION['type'] = $data['type'];
+
 	}
 }
 //Si une erreur se produit pendant le script redirection immédiat vers la page login
