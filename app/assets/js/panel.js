@@ -20,7 +20,7 @@ function callSearch(str){
 }
 
 function searchlink(content,li){;
-    let input = document.getElementById("input")
+    let input = document.getElementById("inputName")
     input.value = content;
     let ul = document.getElementById("result");
     ul.style.display = "none";
@@ -29,7 +29,7 @@ function searchlink(content,li){;
 let names = [];
 let sortedNames = names.sort();
 
-let input = document.getElementById("input");
+let input = document.getElementById("inputName");
 
 input.addEventListener("keyup", (e) => {
 removeElements();
@@ -145,9 +145,9 @@ function aide(userSay) {
 
 myForm.addEventListener("submit", function(e) {
     e.preventDefault()
-    let searchBar= document.getElementById("input");
+    let searchBar= document.getElementById("inputName");
     let userSay = searchBar.value;
-    document.getElementById("input").value = "";
+    document.getElementById("inputName").value = "";
 
     if(userSay.length!==0) {
         showMessageUser(userSay);
@@ -155,20 +155,31 @@ myForm.addEventListener("submit", function(e) {
         if(userSay.toLowerCase().includes("aide")) {
         aide();
         } else {
+            let btnName = document.getElementById('btnsubmitName');
+                    let btnMsg = document.getElementById('btnsubmitMessage');
+                    let inputMsg = document.getElementById('inputMessage');
+                    let inputName = document.getElementById('inputName');
+
             switch(chatState) {
                 case 1:
                     askMessage(userSay);
                     chatState = 2;
-                    let input = document.getElementById('input');
-                    let form = document.getElementById('myForm');
+                
+                    inputName.style.display = "none";
+                    inputMsg.style.display ="block";
+                    btnName.style.display = "none";
+                    btnMsg.style.display = "block";
+                    myForm.method="POST";
+                    myForm.action="controller/message.php";
+
                     input.onkeyup = "";
                    // myForm.action ="/controller/message.php";
                     break;
                 case 2:
                     messageUser(userSay);
                     chatState = 3;
-                    var btn = document.getElementById('btnsubmit');
-                    //myForm.action ="/controller/message.php";
+
+                    inputMsg.attr.placeholder  ="Votre message";
                     //console.log(input.value);
                     btn.remove();
                     break;
@@ -178,4 +189,9 @@ myForm.addEventListener("submit", function(e) {
                 }
         }
     }
+})
+
+myForm.on("submit", function(e) {
+    e.preventDefault()
+
 })
