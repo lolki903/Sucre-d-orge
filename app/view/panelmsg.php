@@ -14,13 +14,16 @@ include('../controller/requests.php');
    <body class="bg-dark">
 
       <!-- A horizontal navbar that becomes vertical on small screens -->
-      <nav class="navbar navbar-expand-sm bg-dark">
+      <nav class="navbar navbar-light bg-danger">
       <ul class="nav nav-pills">
     <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="../view/paneluser.php">Liste des messages</a>
     </li>
     <li class="nav-item">
     <a class="nav-link" href="../controller/disconect.php">Déconnexion</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="../view/index.php">Accueil</a>
     </li>
     </ul>
       </nav>
