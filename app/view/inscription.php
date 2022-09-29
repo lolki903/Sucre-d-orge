@@ -4,11 +4,16 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=7">
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" href="inscription.css">
+<link rel="stylesheet" href="../assets/css/inscription.css">
 
 	<title>Créer un compte</title>
 </head>
 <body class="bg-danger">
+<section>
+    <div class="snow1"></div>
+    <div class="snow2"></div>
+    <div class="snow3"></div>
+</section>
 <nav class="navbar navbar-light bg-danger">
             <div class="logo">
                 <img src="../assets/images/logo.gif" alt="this slowpoke moves"  width="100" />
