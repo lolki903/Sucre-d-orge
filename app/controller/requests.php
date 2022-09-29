@@ -29,6 +29,7 @@ function GetAllUsers($db,$parPage){
 
 
 function GetTrades($db,$parPage){
+	//$sl = "UPDATE `trades` SET status = 3";
     $start = $_GET['page'];
 	$depart = ($start - 1) * $parPage;
 	$req="SELECT trades.sender , trades.receiver ,trades.message ,trades.status , statut.type FROM `trades` LEFT JOIN statut ON trades.status = statut.id LIMIT $depart, $parPage";
@@ -54,7 +55,7 @@ function GetTrades($db,$parPage){
 			   if($row['type']=== "VALIDÉ"){
 					   $class= "bg bg-success";
 					  };	
-				echo "<tr> <td> $row[sender] </td> <td> $row[receiver] </td> <td> $row[message] </td> <td class='$class'>$row[type]</td> <td><a href='#'>valide</a>   <a href='#'>refuse</a></td></tr>";
+				echo "<tr> <td> $row[sender] </td> <td> $row[receiver] </td> <td> $row[message] </td> <td class='$class'>$row[type]</td> <td><button href='#'>valide</button>   <button href='#'>refuse</button></td></tr>";
 			}
 				
 		}

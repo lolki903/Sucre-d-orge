@@ -31,7 +31,17 @@ if(empty($_POST['form_prenom']))
 
 if(empty($_POST['form_email']))
 	$_POST['form_email']=null;
-
+	$carac_interdits[] = array('@', '/','$') ; 
+$traitement = 1 ;
+$erreur = 0 ;
+foreach($carac_interdits as $traitement) {
+  $position = strpos($message_temporaire, $traitement) ; 
+  if ($position !== FALSE) {
+    echo 'Erreur : Vous ne pouvez pas utiliser le caractère    <strong>'.$traitement.'</strong> <br />' ;
+   $erreur = 1 ;
+ } 
+} 
+if($erreur == 0){
 //variable pour inserer les elements dans la base de données puis association de l'input avec la donné  voulu
 $add=$db->prepare('INSERT INTO user ( lastname, firstname, email, password, type) VALUES ( :l, :f, :e, :p, :j) ') ;
 
@@ -67,6 +77,6 @@ flash_in('sucess','bienvenue');
 //Si tout le scripts a été executer correctement nous redirecger vers la page d'accueil
 header('Location: ../index.php');
 
-}
+}}
 
 include('../view/inscription.php');
