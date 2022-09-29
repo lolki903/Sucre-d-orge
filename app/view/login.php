@@ -32,7 +32,7 @@
 		</div>
 	</div>
 	<div class="row justify-content-center">
-	<button type="submit" name="valider" class="btn btn-light btn-lg" required><a href="adduser.php">Je m'inscris</a></button>
+	<button type="submit" name="valider" class="btn btn-light btn-lg" required> <a href="adduser.php">	Je m'inscris</a></button>
 	  <button type="submit" name="valider" class="btn btn-light btn-lg" required>Je me connecte</button>
 	</div>
   </form>			

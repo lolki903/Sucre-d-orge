@@ -35,7 +35,7 @@
 	</div>
 	<div class="row justify-content-center">
 		<button type="submit" name="valider" class="btn btn-light btn-lg" required>Je m'inscris</button>
-		<button type="submit" name="valider" class="btn btn-light btn-lg" required><a href="login.php">Je me connecte</a></button>
+	<button type="submit" name="valider" class="btn btn-light btn-lg" required><a href="login.php"> Je me connecte </a></button>
 	</div>
 	</form>
 </body>
