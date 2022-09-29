@@ -27,12 +27,12 @@
 			<div class="card" style="width: 48rem;">
 					<div class="card-header">Se connecter</div>
 						<input class="form-control" type="text" name="form_email" placeholder="Email" required>
-						<input class="form-control" type="password" name="form_motdepasses" placeholder="Mot de passe" required>
+						<input class="form-control" type="password" name="form_motdepasse" placeholder="Mot de passe" required>
 			</div>
 		</div>
 	</div>
 	<div class="row justify-content-center">
-	<a href="inscription.php">	<button type="submit" name="valider" class="btn btn-light btn-lg" required>Je m'inscris</button></a>
+		<button type="submit" name="valider" class="btn btn-light btn-lg" required><a href="adduser.php">Je m'inscris</a></button>
 	  <button type="submit" name="valider" class="btn btn-light btn-lg" required>Je me connecte</button>
 	</div>
   </form>			
