@@ -29,7 +29,7 @@ function GetAllUsers($db){
 
 function GetTrades($db){
     
-	$req="SELECT user.email, trades.email_id, user.lastname, user.firstname, trades.receiver, FROM trades LEFT JOIN user ON trades.email_id = user.id";
+	$req="SELECT trades.sender , trades.receiver ,trades.message ,trades.status , statut.type FROM `trades` LEFT JOIN statut ON trades.status = statut.id";
 	$stmt = $db->prepare($req);
 	$stmt->execute();
 	if(!$stmt){
@@ -40,7 +40,17 @@ function GetTrades($db){
 		$nblignes = $stmt->rowCount();
 	    if($nblignes>=1){
 			while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-				echo $row["email"]."<br>" ;			
+				$class="de";
+				if($row['type']=== "EN COURS"){
+					$class= "bg bg-warning";
+				   };
+			   if($row['type']=== "REFUSÉ"){
+					   $class= "bg bg-danger";
+					  };
+			   if($row['type']=== "VALIDÉ"){
+					   $class= "bg bg-success";
+					  };	
+				echo "<tr> <td> $row[sender] </td> <td> $row[receiver] </td> <td> $row[message] </td> <td class='$class'>$row[type]</td></tr>";
 			}
 				
 		}

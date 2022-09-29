@@ -1,3 +1,8 @@
+<?php
+include('../config/setting.php');
+include('../controller/requests.php');
+
+?>
 <!DOCTYPE html>
 <html>
    <head>
@@ -33,26 +38,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td> <button type="button" class="btn btn-primary"> <i class="bi bi-check-lg"></i></button>
-       <button type="button" class="btn btn-primary"> <i class="bi bi-x"></i></button></td>
-    </tr>
-    <tr>
-
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-    
-    <td>Jadfdfqdfqsf@dfqfqsfqdf</td>
-      <td>fqdfqfqdf@qfqdfqdfqdn</td>
-      <td>djfgdsngmonsdmkgnsdmngskmdngksdngknsfkgnskngksfngklfnsklnsfkbnsfklbnsfknbkfsnbklsfnbklsfnbklnsfbklnsfjlbnfsjklnbjklsfnbjlfsnbjlnsfbnsfbnsfklnsfbn</td>
-    </tr>
+   <?php GetTrades($db); ?>
   </tbody>
 </table>
 <nav aria-label="Page de navigation">
