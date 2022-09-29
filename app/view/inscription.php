@@ -30,7 +30,7 @@
 					<div class="card-header"> S'inscrire</div>
 						<input class="form-control" type="text" name="form_prenom" placeholder="Prénom" required>
 						<input class="form-control" type="text" name="form_nom" placeholder="Nom" required>
-						<input class="form-control" type="text" name="form_email" placeholder="Adresse mail" required>
+						<input class="form-control frfrr" type="hidden" name="form_email" value="Adresse mail" required>
 						<input class="form-control" type="password" name="form_motdepasse" placeholder="Mot de passe" required>
 						<input class="form-control" type="password" name="form_motdepasses" placeholder="Repeter le Mot de passe" required>
 			</div>

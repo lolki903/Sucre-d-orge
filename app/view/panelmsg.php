@@ -90,7 +90,7 @@ $articles = $query->fetchAll(PDO::FETCH_ASSOC);
 <nav aria-label="Page de navigation">
   <ul class="pagination">
   <li class="page-item <?= ($currentPage == 1) ? "disabled" : "" ?>">
-            <a href="./?page=<?= $currentPage - 1 ?>" class="page-link">Précédente</a>
+            <a href="?page=<?= $currentPage - 1 ?>" class="page-link">Précédente</a>
         </li>
         <?php for($page = 1; $page <= $pages; $page++): ?>
             <!-- Lien vers chacune des pages (activé si on se trouve sur la page correspondante) -->

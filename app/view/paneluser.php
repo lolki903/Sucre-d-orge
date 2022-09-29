@@ -17,7 +17,7 @@ include('../controller/requests.php');
       <nav class="navbar navbar-light bg-danger">
       <ul class="nav nav-pills">
     <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="../view/panelmsg.php">Liste des messages</a>
+    <a class="nav-link active" aria-current="page" href="../view/panelmsg.php?page=1">Liste des messages</a>
     </li>
     <li class="nav-item">
     <a class="nav-link" href="../view/index.php">Accueil</a>

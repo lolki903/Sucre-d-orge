@@ -10,7 +10,11 @@ else{
 $lastname = $_SESSION['lastname'];
 $firstname = $_SESSION['firstname'];
 }
-
+if($_SESSION['type'] === "1"){
+    header('Location: view/panelmsg.php?page=1') ;
+}else{
+    
+}
 ?>
 
 <!doctype html>
@@ -35,14 +39,7 @@ $firstname = $_SESSION['firstname'];
     </li>
     <button type="button" class="btn btn-light pull-right"><a href="../controller/disconect.php">Déconnexion</a></button>
             <?php 
-                if($_SESSION['type'] == 1){
-        
-                    header('Location: view/panelmsg.php') ;
-                    }
-                if($_SESSION['type'] == 0){
-        
-                    header('Location: view/index.php') ;
-                        }
+                
     
             ?>
             

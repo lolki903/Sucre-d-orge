@@ -29,10 +29,12 @@ function GetAllUsers($db){
 
 function GetTrades($db,$parPage){
     $start = $_GET['page'];
-	$depart = ($start -1)* $parPage;
+	$depart = ($start - 1) * $parPage;
 	$req="SELECT trades.sender , trades.receiver ,trades.message ,trades.status , statut.type FROM `trades` LEFT JOIN statut ON trades.status = statut.id LIMIT $depart, $parPage";
 	$stmt = $db->prepare($req);
+	var_dump($req);
 	$stmt->execute();
+	
 	if(!$stmt){
 			
 	    echo "connexion a la bbd marche pas";
