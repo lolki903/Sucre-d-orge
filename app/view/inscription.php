@@ -3,57 +3,31 @@
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=7">
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<link href="../assets/css/inscription.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 	<title>Créer un compte</title>
 </head>
-<body>
-<?php //creation du form?>
-	<main class="main-w3layouts wrapper">
-		<h1>CREER UN COMPTE </h1>
-		<div class="main-agileinfo">
-		<div class="agileits-top">
-		<form method="POST">
-			<div>
-			<p>
-				<input class="text" type="text" name="form_nom" placeholder="Nom" class="name fr" >
-			</p>
-			<p>
-				<input class="text" type="text" name="form_prenom" placeholder="Prénom"class="firstname fr" >
-			</p>
+<body class="bg-danger">
+	<?php //creation du form?>
+	<form method="POST">
+	<div class="container">
+		<div class="row justify-content-center text-center p-5">
+			<div class="card" style="width: 48rem;">
+					<div class="card-header"> S'inscrire</div>
+						<input class="form-control" type="text" name="form_prenom" placeholder="Prénom" required>
+						<input class="form-control" type="text" name="form_nom" placeholder="Nom" required>
+						<input class="form-control" type="text" name="form_email" placeholder="Adresse mail" required>
+						<input class="form-control" type="password" name="form_motdepasse" placeholder="Mot de passe" required>
+						<input class="form-control" type="password" name="form_motdepasses" placeholder="Repeter le Mot de passe" required>
 			</div>
-			<p>
-				<input class="text" type="text" name="form_email" id="email" placeholder="@my-digital-school.org">
-
-			</p>
-			<p>
-				<input type="password" name="form_motdepasse" id="password" placeholder="Mot de passe" required >
-			</p>
-				<p>
-				
-				<input class="text w3lpass"type="password" name="form_motdepasses" id="confirm" placeholder="Confirmation mot de passe" required >
-			</p>
-			<div class="wthree-text">
-						<div class="clear"> </div>
-					</div>
-			<p>
-				<button type="submit" name="valider" id="bouto">CRÉATION DU COMPTE</button>
-			</p>
-		</form>
 		</div>
 	</div>
-	</main>
-	<!-- //copyright -->
-	<ul class="colorlib-bubbles">
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ul>
+	<div class="row justify-content-center">
+		<button type="submit" name="valider" class="btn btn-light btn-lg" required>Je m'inscris</button>
+	<a href="login.php"><button type="button" class="btn btn-light btn-lg" required>Je me connecte</button></a>
+	</div>
+	</form>
+</body>
+</html>
 </body>
 </html>

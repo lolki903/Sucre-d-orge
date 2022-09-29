@@ -28,6 +28,7 @@ if (empty($_POST)) {
 		//Reprendre la session de l'user en le chercher grace a la variable data
 		$_SESSION['lastname'] = $data['lastname'];
 		$_SESSION['firstname'] = $data['firstname'];
+		$_SESSION['type'] = $data['type'];
 	}
 }
 //Si une erreur se produit pendant le script redirection immédiat vers la page login
