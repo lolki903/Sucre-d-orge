@@ -30,10 +30,13 @@ $firstname = $_SESSION['firstname'];
             <?php 
                 if($_SESSION['type'] == 1){
         
-                    echo "<a href='view/panelmsg.php' class='btn btn-outline-light' >Administrateurs</a>" ;
-                    }else{
+                    header('Location: view/panelmsg.php') ;
+                    }
+                if($_SESSION['type'] == 0){
         
-                }
+                    header('Location: view/index.php') ;
+                        }
+    
             ?>
             
             <div class="logo">
