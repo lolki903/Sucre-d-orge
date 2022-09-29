@@ -33,7 +33,7 @@ if (empty($_POST)) {
 }
 //Si une erreur se produit pendant le script redirection immédiat vers la page login
 if ($error) {
-	$message ="<p color='red'> Adresse email ou mot de passe incorect !</p>";
+	$message ="<p class='alert alert-danger text-center' role='alert' color='red' class='alert-heading'> Adresse email ou mot de passe incorect !</p>";
 }
 
 else{

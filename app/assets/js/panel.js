@@ -160,14 +160,16 @@ myForm.addEventListener("submit", function(e) {
                     askMessage(userSay);
                     chatState = 2;
                     let input = document.getElementById('input');
+                    let form = document.getElementById('myForm');
                     input.onkeyup = "";
+                   // myForm.action ="/controller/message.php";
                     break;
                 case 2:
                     messageUser(userSay);
                     chatState = 3;
                     var btn = document.getElementById('btnsubmit');
-                    myForm.action ="controller/message.php";
-                     console.log(input.value);
+                    //myForm.action ="/controller/message.php";
+                    //console.log(input.value);
                     btn.remove();
                     break;
                 case 3:

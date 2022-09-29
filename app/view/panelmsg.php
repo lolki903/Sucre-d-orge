@@ -46,22 +46,28 @@ $articles = $query->fetchAll(PDO::FETCH_ASSOC);
       <title>Panel administrateur</title>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css">
+      <link rel="stylesheet" type="text/css" href="../assets/css/panelmsg.css">
    </head>
    <body class="bg-dark">
 
       <!-- A horizontal navbar that becomes vertical on small screens -->
       <nav class="navbar navbar-light bg-danger">
       <ul class="nav nav-pills">
+        
     <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="../view/paneluser.php">Liste des messages</a>
+    <a class="nav-link active" aria-current="page" href="../view/paneluser.php">Liste des utilisateurs</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="../view/index.php">Accueil</a>
     </li>
     <li class="nav-item">
     <a class="nav-link" href="../controller/disconect.php">Déconnexion</a>
     </li>
-    <li class="nav-item">
-    <a class="nav-link" href="../index.php">Accueil</a>
-    </li>
+
     </ul>
+    <div class="logo">
+                <img src="../assets/images/logo.gif" alt="this slowpoke moves"  width="100" />
+            </div>
       </nav>
 
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
@@ -70,14 +76,42 @@ $articles = $query->fetchAll(PDO::FETCH_ASSOC);
       <table class="table table-bordered table-dark">
   <thead>
     <tr>
-      <th scope="col">Email envoyeur</th>
-      <th scope="col">Email receveur</th>
-      <th scope="col">Message</th>
-      <th scope="col">Actions</th>
+      <th scope="col-1">Email envoyeur</th>
+      <th scope="col-2">Email receveur</th>
+      <th scope="col-3">Message</th>
+      <th scope="col-4">Statuts</th>
+      <th scope="col-5">Actions</th>
     </tr>
   </thead>
   <tbody>
+<<<<<<< HEAD
    <?php GetTrades($db,$parPage); ?>
+=======
+<<<<<<< HEAD
+    <tr>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td> <button type="button" class="btn btn-primary"> <i class="bi bi-check-lg"></i></button>
+       <button type="button" class="btn btn-primary"> <i class="bi bi-x"></i></button></td>
+    </tr>
+    <tr class="d-flex">
+
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+    
+    <td>Jadfdfqdfqsf@dfqfqsfqdf</td>
+      <td>fqdfqfqdf@qfqdfqdfqdn</td>
+      <th class="A"><p></p></th>
+    </tr>
+=======
+   <?php GetTrades($db); ?>
+>>>>>>> 9fd7df71f96f8cbda1534972ccb65ea7c40fb2c1
+>>>>>>> 343e09bfa5295cfa1be3457efde875ff00ba780b
   </tbody>
 </table>
 <nav aria-label="Page de navigation">
