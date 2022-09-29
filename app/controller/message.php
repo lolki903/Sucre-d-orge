@@ -24,9 +24,8 @@ require_once("requests.php");
         else{
             $nblignes = $stmt->rowCount();	
                 if($nblignes>0){ 
-                $_SESSION['sended'] = true;
+                $_SESSION['sended'] = 1;
                 header("Location: ../index.php");
-
 
                         }
                 else

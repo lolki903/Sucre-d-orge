@@ -48,9 +48,7 @@ if($_SESSION['type'] === 1){
         <!--navbar-->
         <!--content-->
         <?php      
-        var_dump($_SESSION['sended']);           
-        var_dump($_SESSION['lastname']);"echo </br>";
-        var_dump($_SESSION['firstname']);
+        
                 if($_SESSION['sended'] === 1){
                  echo "VOUS AVEZ DEJA ENVOYÉ UN MESSAGE";
                 }else{ 
