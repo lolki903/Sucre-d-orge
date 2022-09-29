@@ -10,7 +10,8 @@ else{
 $lastname = $_SESSION['lastname'];
 $firstname = $_SESSION['firstname'];
 }
-if($_SESSION['type'] === "1"){
+// CA fonctionne la location
+if($_SESSION['type'] === 1){
     header('Location: view/panelmsg.php?page=1') ;
 }else{
     
