@@ -1,3 +1,8 @@
+<?php
+include('../config/setting.php');
+include('../controller/requests.php');
+
+?>
 <!DOCTYPE html>
 <html>
    <head>
@@ -9,13 +14,16 @@
    <body class="bg-dark">
 
       <!-- A horizontal navbar that becomes vertical on small screens -->
-      <nav class="navbar navbar-expand-sm bg-dark">
+      <nav class="navbar navbar-light bg-danger">
       <ul class="nav nav-pills">
     <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="../view/paneluser.php">Liste des messages</a>
     </li>
     <li class="nav-item">
     <a class="nav-link" href="../controller/disconect.php">Déconnexion</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="../view/index.php">Accueil</a>
     </li>
     </ul>
       </nav>
@@ -33,26 +41,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td> <button type="button" class="btn btn-primary"> <i class="bi bi-check-lg"></i></button>
-       <button type="button" class="btn btn-primary"> <i class="bi bi-x"></i></button></td>
-    </tr>
-    <tr>
-
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-    
-    <td>Jadfdfqdfqsf@dfqfqsfqdf</td>
-      <td>fqdfqfqdf@qfqdfqdfqdn</td>
-      <td>djfgdsngmonsdmkgnsdmngskmdngksdngknsfkgnskngksfngklfnsklnsfkbnsfklbnsfknbkfsnbklsfnbklsfnbklnsfbklnsfjlbnfsjklnbjklsfnbjlfsnbjlnsfbnsfbnsfklnsfbn</td>
-    </tr>
+   <?php GetTrades($db); ?>
   </tbody>
 </table>
 <nav aria-label="Page de navigation">

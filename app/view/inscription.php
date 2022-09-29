@@ -4,10 +4,16 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=7">
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="inscription.css">
 
 	<title>Créer un compte</title>
 </head>
 <body class="bg-danger">
+<nav class="navbar navbar-light bg-danger">
+            <div class="logo">
+                <img src="../assets/images/logo.gif" alt="this slowpoke moves"  width="100" />
+            </div>
+          </nav>
 	<?php //creation du form?>
 	<form method="POST">
 	<div class="container">

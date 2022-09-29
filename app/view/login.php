@@ -5,11 +5,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Connexion Sucre d'orge</title>
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'><link rel="stylesheet" href="../assets/css/connexion.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'><link rel="stylesheet" href="../assets/css/connexion.scss">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
 <body class="bg-danger">
+  <div class ="wrapper">
+    <div class="snow layer1"></div>
+    </div>
+
+<nav class="navbar navbar-light bg-danger">
+            <div class="logo">
+                <img src="../assets/images/logo.gif" alt="this slowpoke moves"  width="100" />
+            </div>
+          </nav>
 <!-- partial:index.partial.html -->
 <div class="login-form">
   <form method="POST">
@@ -28,6 +37,9 @@
 	</div>
   </form>			
   <p> <?php if(isset($message) !== "" || isset($message) !== null){echo $message;}else{} ?></p>
+
+
+</div>
 </div>
 
 </body>
