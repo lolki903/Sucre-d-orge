@@ -1,6 +1,6 @@
 <?php 
 
-function GetAllUsers($db,$parPage){
+function GetAllUsers($db){
 
 	$req="SELECT lastname, firstname, email FROM `user`";
 	$stmt = $db->prepare($req);
