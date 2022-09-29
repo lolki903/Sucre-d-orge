@@ -10,6 +10,7 @@ if (empty($_POST)) {
 
 	flash_in('error','Non !');
 }else{
+	//DERNIERE
 	$email =$_POST['form_nom'].".".$_POST['form_prenom'];
 	//variable pour lire les elements dans la base de données puis association de l'input avec la donné  voulu
 	$search =$db->prepare('SELECT * FROM user WHERE email = :u AND password = :p');//INSERT INTO user ( lastname, firstname, email, password, type) VALUES ( :l, :f, :e, :p, :j) '
