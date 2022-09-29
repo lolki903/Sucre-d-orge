@@ -84,34 +84,7 @@ $articles = $query->fetchAll(PDO::FETCH_ASSOC);
     </tr>
   </thead>
   <tbody>
-<<<<<<< HEAD
    <?php GetTrades($db,$parPage); ?>
-=======
-<<<<<<< HEAD
-    <tr>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td> <button type="button" class="btn btn-primary"> <i class="bi bi-check-lg"></i></button>
-       <button type="button" class="btn btn-primary"> <i class="bi bi-x"></i></button></td>
-    </tr>
-    <tr class="d-flex">
-
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-    
-    <td>Jadfdfqdfqsf@dfqfqsfqdf</td>
-      <td>fqdfqfqdf@qfqdfqdfqdn</td>
-      <th class="A"><p></p></th>
-    </tr>
-=======
-   <?php GetTrades($db); ?>
->>>>>>> 9fd7df71f96f8cbda1534972ccb65ea7c40fb2c1
->>>>>>> 343e09bfa5295cfa1be3457efde875ff00ba780b
   </tbody>
 </table>
 <nav aria-label="Page de navigation">

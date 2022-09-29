@@ -39,11 +39,7 @@
 		</div>
 	</div>
 	<div class="row justify-content-center">
-<<<<<<< HEAD
-		<button type="submit" name="valider" class="btn btn-light btn-lg" required><a href="adduser.php">Je m'inscris</a></button>
-=======
 	<button type="submit" name="valider" class="btn btn-light btn-lg" required> <a href="adduser.php">	Je m'inscris</a></button>
->>>>>>> 9fd7df71f96f8cbda1534972ccb65ea7c40fb2c1
 	  <button type="submit" name="valider" class="btn btn-light btn-lg" required>Je me connecte</button>
 	</div>
   </form>			
