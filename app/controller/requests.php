@@ -58,7 +58,7 @@ function GetTrades($db,$parPage){
 			   if($row['type']=== "VALIDÉ"){
 					   $class= "bg bg-success";
 					  };	
-				echo "<tr> <td> $row[sender] </td> <td> $row[receiver] </td> <td> $row[message] </td> <td class='$class'>$row[type]</td> <td><a href='#'>valide</a>   <a href='#'>refuse</a></td></tr>";
+				echo "<tr> <td> $row[sender] </td> <td> $row[receiver] </td> <td> $row[message] </td> <td class='$class'>$row[type]</td> <td><button href='#'>valide</button>   <button href='#'>refuse</button></td></tr>";
 			}
 				
 		}
@@ -72,8 +72,5 @@ function GetTrades($db,$parPage){
 }
 
 
-/*SELECT DISTINCT  trades.email_id AS sender_id , TEST.receiver_id, user.email AS email_sender , TEST.email_receiver , trades.message FROM trades join 
-(SELECT DISTINCT user.email AS email_receiver, trades.receiver AS receiver_id FROM user LEFT JOIN trades ON user.id = trades.receiver ) AS TEST LEFT JOIN user ON trades.email_id = user.id WHERE user.email != TEST.email_receiver
-*/
 
 ?>
