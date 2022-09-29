@@ -10,6 +10,11 @@
 
 </head>
 <body class="bg-danger">
+<nav class="navbar navbar-light bg-danger">
+            <div class="logo">
+                <img src="../assets/images/logo.gif" alt="this slowpoke moves"  width="100" />
+            </div>
+          </nav>
 <!-- partial:index.partial.html -->
 <div class="login-form">
   <form method="POST">

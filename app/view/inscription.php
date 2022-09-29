@@ -8,6 +8,11 @@
 	<title>Créer un compte</title>
 </head>
 <body class="bg-danger">
+<nav class="navbar navbar-light bg-danger">
+            <div class="logo">
+                <img src="../assets/images/logo.gif" alt="this slowpoke moves"  width="100" />
+            </div>
+          </nav>
 	<?php //creation du form?>
 	<form method="POST">
 	<div class="container">
