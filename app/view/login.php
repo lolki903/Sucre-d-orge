@@ -7,13 +7,18 @@
   <title>Connexion Sucre d'orge</title>
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'><link rel="stylesheet" href="../assets/css/connexion.scss">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/css/login.css">
 
 </head>
 <body class="bg-danger">
-  <div class ="wrapper">
-    <div class="snow layer1"></div>
-    </div>
-
+<section>
+    <div class="snow1"></div>
+    <div class="snow2"></div>
+    <div class="snow3"></div>
+	<div class="snow4"></div>
+	<div class="snow5"></div>
+	<div class="snow6"></div>
+</section>
 <nav class="navbar navbar-light bg-danger">
             <div class="logo">
                 <img src="../assets/images/logo.gif" alt="this slowpoke moves"  width="100" />
@@ -32,7 +37,11 @@
 		</div>
 	</div>
 	<div class="row justify-content-center">
+<<<<<<< HEAD
 		<button type="submit" name="valider" class="btn btn-light btn-lg" required><a href="adduser.php">Je m'inscris</a></button>
+=======
+	<button type="submit" name="valider" class="btn btn-light btn-lg" required> <a href="adduser.php">	Je m'inscris</a></button>
+>>>>>>> 9fd7df71f96f8cbda1534972ccb65ea7c40fb2c1
 	  <button type="submit" name="valider" class="btn btn-light btn-lg" required>Je me connecte</button>
 	</div>
   </form>			

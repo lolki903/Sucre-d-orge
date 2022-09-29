@@ -74,18 +74,20 @@ $firstname = $_SESSION['firstname'];
         <div id="barSendMessages" class="row">
         </div>
             <!-- typing message-->
-            <form autocomplete ="off" id="myForm" class="fixed-bottom">
+            <form autocomplete ="off" id="myForm" method="POST" action="controller/message.php" class="fixed-bottom">
                 <div class="typing-message row">
                     <div class="col-9">
                         <div class="input-group mb-3 center justify-content-left">
                             <input type="text" id="input" onkeyup='callSearch(this.value)' placeholder="Votre message" value="" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                            <button type="submit" id="btnsubmit" class="btn btn-light">Envoyer</button>
+                            <input type="submit" id="btnsubmit" name="valider" class="btn btn-light">Envoyer</input>
+                            <input type="submit" id="btnsubmit" name="valider" class="btn btn-light">Envoyer</input>
                         </div>
                     </div>
                     <ul class="list" id="result">
                     </ul>
                 </div>
             </form>
+
     </div>
     <script src="assets/js/panel.js"></script>
 </body>

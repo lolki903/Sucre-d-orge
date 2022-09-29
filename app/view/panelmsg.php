@@ -1,3 +1,8 @@
+<?php
+include('../config/setting.php');
+include('../controller/requests.php');
+
+?>
 <!DOCTYPE html>
 <html>
    <head>
@@ -43,6 +48,7 @@
     </tr>
   </thead>
   <tbody>
+<<<<<<< HEAD
     <tr>
       <td>Mark</td>
       <td>Otto</td>
@@ -63,6 +69,9 @@
       <td>fqdfqfqdf@qfqdfqdfqdn</td>
       <th class="A"><p></p></th>
     </tr>
+=======
+   <?php GetTrades($db); ?>
+>>>>>>> 9fd7df71f96f8cbda1534972ccb65ea7c40fb2c1
   </tbody>
 </table>
 <nav aria-label="Page de navigation">
