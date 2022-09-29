@@ -24,7 +24,7 @@
 	</div>
 	<div class="row justify-content-center">
 		<button type="submit" name="valider" class="btn btn-light btn-lg" required>Je m'inscris</button>
-	<a href="login.php"><button type="button" class="btn btn-light btn-lg" required>Je me connecte</button></a>
+	<a href="login.php"><button type="submit" name="valider" class="btn btn-light btn-lg" required>Je me connecte</button></a>
 	</div>
 	</form>
 </body>

@@ -24,7 +24,7 @@
 	</div>
 	<div class="row justify-content-center">
 	<a href="inscription.php">	<button type="submit" name="valider" class="btn btn-light btn-lg" required>Je m'inscris</button></a>
-	  <button type="button" class="btn btn-light btn-lg" required>Je me connecte</button>
+	  <button type="submit" name="valider" class="btn btn-light btn-lg" required>Je me connecte</button>
 	</div>
   </form>			
   <p> <?php if(isset($message) !== "" || isset($message) !== null){echo $message;}else{} ?></p>
