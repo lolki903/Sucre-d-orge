@@ -55,10 +55,9 @@ $articles = $query->fetchAll(PDO::FETCH_ASSOC);
       <ul class="nav nav-pills">
         
     <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="../view/paneluser.php">Liste des utilisateurs</a>
+    <a class="nav-link active" aria-current="page" href="../view/paneluser.php?page=1">Liste des utilisateurs</a>
     </li>
     <li class="nav-item">
-    <a class="nav-link" href="../view/index.php">Accueil</a>
     </li>
     <li class="nav-item">
     <a class="nav-link" href="../controller/disconect.php">Déconnexion</a>

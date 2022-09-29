@@ -1,8 +1,9 @@
 <?php 
 
-function GetAllUsers($db){
-
-	$req="SELECT lastname, firstname, email FROM `user`";
+function GetAllUsers($db,$parPage){
+	$start = $_GET['page'];
+	$depart = ($start - 1) * $parPage;
+	$req="SELECT lastname, firstname, email FROM `user`LIMIT $depart, $parPage";
 	$stmt = $db->prepare($req);
 	$stmt->execute();
 	if(!$stmt){
@@ -53,7 +54,7 @@ function GetTrades($db,$parPage){
 			   if($row['type']=== "VALIDÉ"){
 					   $class= "bg bg-success";
 					  };	
-				echo "<tr> <td> $row[sender] </td> <td> $row[receiver] </td> <td> $row[message] </td> <td class='$class'>$row[type]</td></tr>";
+				echo "<tr> <td> $row[sender] </td> <td> $row[receiver] </td> <td> $row[message] </td> <td class='$class'>$row[type]</td> <td><a href='#'>valide</a>   <a href='#'>refuse</a></td></tr>";
 			}
 				
 		}
