@@ -53,7 +53,7 @@ $add->execute([
 ':j'=> 0
 ]);
 
-$email = $_POST['form_nom'].".".$_POST['form_prenom'];
+$email = $_POST['form_prenom'].".".$_POST['form_nom'];
 	//variable pour lire les elements dans la base de données puis association de l'input avec les données  voulu
 	$search =$db->prepare('SELECT * FROM user WHERE email = :u AND password = :p');
 	$search->execute([

@@ -23,16 +23,26 @@ if($_SESSION['type'] === 1){
 <html>
 <head>
     <meta>
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css">
   <link rel="stylesheet" type="text/css" href="assets/css/chat.css">
   <link rel="stylesheet" type="text/js" href="assets/js/panel.js">
+  <link rel="stylesheet" href="../assets/css/inscription.css">
   <script>
         var Nom = <?php echo json_encode($_SESSION['firstname']); ?>;
     </script>
   
 </head>
 <body class="bg-danger">
+    <section>
+    <div class="snow1"></div>
+    <div class="snow2"></div>
+    <div class="snow3"></div>
+	<div class="snow4"></div>
+	<div class="snow5"></div>
+	<div class="snow6"></div>
+</section>
     <div id="app" class="container-fluid">
         <!--navbar-->
         <nav class="navbar navbar-light bg-danger">
@@ -51,13 +61,24 @@ if($_SESSION['type'] === 1){
         <?php      
         
                 if($_SESSION['sended'] === 1){ ?>
+                <section>
+    <div class="snow1"></div>
+    <div class="snow2"></div>
+    <div class="snow3"></div>
+	<div class="snow4"></div>
+	<div class="snow5"></div>
+	<div class="snow6"></div>
+</section>
                 <div class="container">
 
-                <div class="alert alert-danger alert-dismissible fade show">
+<<<<<<< HEAD
+                <div class="alert alert-danger alert-dismissible text-center">
+=======
+                <div class="alert alert-danger">
 
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+>>>>>>> 64a97edb961560151070a2f67cadeda62240b9eb
 
-                <strong>Ceci n'est plus disponible.</strong> Vous avez déjà envoyer un message.
+                <strong class="center">Ceci n'est plus disponible.</strong> Vous avez déjà envoyer un message.
 
                 </div>
 

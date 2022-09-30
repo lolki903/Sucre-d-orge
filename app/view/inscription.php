@@ -43,7 +43,7 @@
 					<div class="input-group-prepend">
 					<div class="input-group-text">@</div>
 					</div>
-					<input class="form-control" disabled type="text" name="form_nom" pattern="[a-zA-Z]+" placeholder="@my-digital-school.org" required>
+					<input class="form-control" disabled type="text" name="form_nom" pattern="[a-zA-Z]+" placeholder="my-digital-school.org" required>
 					</div>
 
 						</div>
