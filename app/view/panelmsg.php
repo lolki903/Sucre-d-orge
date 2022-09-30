@@ -46,7 +46,8 @@ $articles = $query->fetchAll(PDO::FETCH_ASSOC);
       <meta charset="utf-8">
       <title>Panel administrateur</title>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+      
       <link rel="stylesheet" type="text/css" href="../assets/css/panelmsg.css">
    </head>
    <body class="bg-dark">

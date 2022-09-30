@@ -57,8 +57,12 @@ function GetTrades($db,$parPage){
 					  };
 			   if($row['type']=== "VALIDÉ"){
 					   $class= "bg bg-success";
-					  };	
-				echo "<tr> <td> $row[sender] </td> <td> $row[receiver] </td> <td> $row[message] </td> <td class='$class'>$row[type]</td> <td><button href='#'>valide</button>   <button href='#'>refuse</button></td></tr>";
+					  };
+				 echo "<tr> <td> $row[sender] </td> <td> $row[receiver] </td> <td> $row[message] </td> <td class='$class'>$row[type]</td> <td><button type='button' class= 'btn btn-primary'><i  class='bi bi-x-lg'></i></button>   <button type='button' class= 'btn btn-primary'><i  class='bi bi-check-lg'></i></button> </td></tr>";
+				//
+				// <tr> <td><?php $row['sender']; </td> <td> <?php echo $row['receiver'];  </td> <td> <?php echo $row['message'];  </td> <td class='<?php echo $class; '><?php echo $row['type']; </td> <td><button type='button' class= 'btn btn-primary'><i  class='bi bi-x-lg'></i></button>   <button type='button' class= 'btn btn-primary'><i  class='bi bi-check-lg'></i></button> </td></tr>
+
+				 
 			}
 				
 		}
