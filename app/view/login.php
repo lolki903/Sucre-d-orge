@@ -33,12 +33,12 @@
 					<div class="col">
 					<div class="input-group mb-2">
 					
-					<input class="form-control" type="text" pattern="[a-zA-Z]+" name="form_nom" placeholder="Nom" required>
+					<input class="form-control" type="text" pattern="[a-zA-Z]+" name="form_nom" placeholder="Prenom" required>
 					<div class="input-group-prepend">
 					<div class="input-group-text">.</div>
 					</div>
 
-					<input class="form-control" type="text" pattern="[a-zA-Z]+" name="form_prenom" placeholder="Prénom" required>
+					<input class="form-control" type="text" pattern="[a-zA-Z]+" name="form_prenom" placeholder="Nom" required>
 					
 					<div class="input-group-prepend">
 					<div class="input-group-text">@</div>
