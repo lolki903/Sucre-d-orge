@@ -1,6 +1,7 @@
 body {
     margin: 0;
     bottom: 0;
+    top: 0;
     background: url("../images/white.png");
 }
 .frfrr{
@@ -9,7 +10,7 @@ body {
 section {
     background-size: cover;
     width: 100%;
-    height: 720px;
+    height: 1080px;
     position: absolute;
     overflow: hidden;
     z-index: -1;
@@ -19,7 +20,7 @@ section {
     background: url("../images/snow.png");
     background-repeat: repeat;
     width: 100%;
-    height: 820px;
+    height: 1080px;
     position: absolute;
     top:0;
     left: 10;
@@ -30,7 +31,7 @@ section {
     background: url("../images/snow.png");
     background-repeat: repeat;
     width: 100%;
-    height: 720px;
+    height: 1080px;
     position: absolute;
     top:0;
     left: 0;
@@ -41,7 +42,7 @@ section {
     background: url("../images/snow.png");
     background-repeat: repeat;
     width: 100%;
-    height: 720px;
+    height: 1080x;
     position: absolute;
     top:0;
     left: 0;
@@ -52,7 +53,7 @@ section {
     background: url("../images/snow.png");
     background-repeat: repeat;
     width: 100%;
-    height: 720px;
+    height: 1080px;
     position: absolute;
     top:0;
     left: 0;
@@ -62,7 +63,7 @@ section {
     background: url("../images/snow.png");
     background-repeat: repeat;
     width: 100%;
-    height: 720px;
+    height: 1080px;
     position: absolute;
     top:0;
     left: 0;
@@ -73,7 +74,7 @@ section {
     background: url("../images/snow.png");
     background-repeat: repeat;
     width: 100%;
-    height: 720px;
+    height: 1080px;
     position: absolute;
     top:0;
     left: 0;
@@ -88,7 +89,7 @@ section {
     }
     100%
     {
-        background-position: 100px 720px ;
+        background-position: 0px 1080px ;
     }
 }
 
@@ -100,7 +101,7 @@ section {
     }
     100%
     {
-        background-position: 0px 720px ;
+        background-position: 0px 1080px ;
     }
 }
 
@@ -112,7 +113,7 @@ section {
     }
     100%
     {
-        background-position: 300px 720px ;
+        background-position: 0px 1080x ;
     }
 }
 
@@ -127,8 +128,10 @@ section {
  
 #loader-wrapper .loader-section.section-left {
     left: 0;
+    top: 0;
 }
  
 #loader-wrapper .loader-section.section-right {
     right: 0;
+    top: 0;
 }
