@@ -51,13 +51,20 @@ if($_SESSION['type'] === 1){
         <?php      
         
                 if($_SESSION['sended'] === 1){ ?>
+                <section>
+    <div class="snow1"></div>
+    <div class="snow2"></div>
+    <div class="snow3"></div>
+	<div class="snow4"></div>
+	<div class="snow5"></div>
+	<div class="snow6"></div>
+</section>
                 <div class="container">
 
-                <div class="alert alert-danger alert-dismissible fade show">
+                <div class="alert alert-danger">
 
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
 
-                <strong>Ceci n'est plus disponible.</strong> Vous avez déjà envoyer un message.
+                <strong class="center">Ceci n'est plus disponible.</strong> Vous avez déjà envoyer un message.
 
                 </div>
 
