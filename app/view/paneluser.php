@@ -2,6 +2,9 @@
 include('../config/setting.php');
 include('../controller/requests.php');
 
+if($_SESSION['type'] !== 1){
+    header('Location: ../index.php') ;
+}else{
 
 if(isset($_GET['page']) && !empty($_GET['page'])){
   $currentPage = (int) strip_tags($_GET['page']);
@@ -103,3 +106,5 @@ $articles = $query->fetchAll(PDO::FETCH_ASSOC);
   </ul>
 </nav>
    </body>
+
+   <?php } ?>
