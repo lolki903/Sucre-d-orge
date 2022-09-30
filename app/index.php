@@ -10,6 +10,12 @@ else{
 $lastname = $_SESSION['lastname'];
 $firstname = $_SESSION['firstname'];
 }
+// CA fonctionne la location
+if($_SESSION['type'] === 1){
+    header('Location: view/panelmsg.php?page=1') ;
+}else{
+    
+}
 
 ?>
 
@@ -17,13 +23,26 @@ $firstname = $_SESSION['firstname'];
 <html>
 <head>
     <meta>
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css">
-  <link rel="stylesheet" type="text/css" href="../assets/css/chat.css">
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/chat.css">
+  <link rel="stylesheet" type="text/js" href="assets/js/panel.js">
+  <link rel="stylesheet" href="../assets/css/inscription.css">
+  <script>
+        var Nom = <?php echo json_encode($_SESSION['firstname']); ?>;
+    </script>
   
 </head>
 <body class="bg-danger">
+    <section>
+    <div class="snow1"></div>
+    <div class="snow2"></div>
+    <div class="snow3"></div>
+	<div class="snow4"></div>
+	<div class="snow5"></div>
+	<div class="snow6"></div>
+</section>
     <div id="app" class="container-fluid">
         <!--navbar-->
         <nav class="navbar navbar-light bg-danger">
@@ -34,23 +53,40 @@ $firstname = $_SESSION['firstname'];
 </ul>
     </li>
     <button type="button" class="btn btn-light pull-right"><a href="../controller/disconect.php">Déconnexion</a></button>
-            <?php 
-                if($_SESSION['type'] == 1){
-        
-                    header('Location: view/panelmsg.php') ;
-                    }
-                if($_SESSION['type'] == 0){
-        
-                    header('Location: view/index.php') ;
-                        }
-    
-            ?>
             
           </nav>
-          <p>HELLOOOOOO <?php echo $firstname; ?></p>
          
         <!--navbar-->
         <!--content-->
+        <?php      
+        
+                if($_SESSION['sended'] === 1){ ?>
+                <section>
+    <div class="snow1"></div>
+    <div class="snow2"></div>
+    <div class="snow3"></div>
+	<div class="snow4"></div>
+	<div class="snow5"></div>
+	<div class="snow6"></div>
+</section>
+                <div class="container">
+
+<<<<<<< HEAD
+                <div class="alert alert-danger alert-dismissible text-center">
+=======
+                <div class="alert alert-danger">
+
+>>>>>>> 64a97edb961560151070a2f67cadeda62240b9eb
+
+                <strong class="center">Ceci n'est plus disponible.</strong> Vous avez déjà envoyer un message.
+
+                </div>
+
+</div>   
+
+                 <?php
+                } else{ 
+            ?>
         <div class="row">
         <!--contacts-->
             <div class="col-3">
@@ -77,13 +113,14 @@ $firstname = $_SESSION['firstname'];
         <div id="barSendMessages" class="row">
         </div>
             <!-- typing message-->
-            <form autocomplete ="off" id="myForm" method="POST" action="controller/message.php" class="fixed-bottom">
+            <form autocomplete ="off" id="myForm" class="fixed-bottom">
                 <div class="typing-message row">
                     <div class="col-9">
                         <div class="input-group mb-3 center justify-content-left">
-                            <input type="text" id="input" onkeyup='callSearch(this.value)' placeholder="Votre message" value="" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                            <input type="submit" id="btnsubmit" name="valider" class="btn btn-light">Envoyer</input>
-                            <input type="submit" id="btnsubmit" name="valider" class="btn btn-light">Envoyer</input>
+                            <input type="text" name="receiver" class="TxtName" id="inputName" pattern="^[a-zA-Z]+\.[a-zA-Z]+$" onkeyup='callSearch(this.value)' placeholder="Votre destinataire"  aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <input type="text" name="message" class="TxtMsg" id="inputMessage" placeholder="Votre message" value="" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <input type="submit" id="btnsubmitName" class="btn btn-light btnName"/>
+                            <input type="submit" id="btnsubmitMessage" name="valider" onclick="myForm.submit()" class="btn btn-light btnMsg"/>
                         </div>
                     </div>
                     <ul class="list" id="result">
@@ -91,7 +128,10 @@ $firstname = $_SESSION['firstname'];
                 </div>
             </form>
 
+            <?php } ?>
     </div>
     <script src="assets/js/panel.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
 </body>
 </html>

@@ -51,3 +51,19 @@ ul {
 .list-items:hover {
     background-color: #dddd;
 }
+
+.btnName{
+   
+}
+
+.btnMsg{
+    display: none;
+}
+
+.TxtMsg{
+    display: none;
+}
+
+.TxtName{ 
+
+}

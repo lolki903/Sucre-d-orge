@@ -2,8 +2,9 @@
 include('../config/setting.php');
 include('../controller/requests.php');
 
-if(isset($_GET['page']) && !empty($_GET['page'])){
-  $currentPage = (int) strip_tags($_GET['page']);
+if(isset($_GET['page'])  AND $_GET['page'] > 0){
+	$_GET['page'] = intval($_GET['page']);
+	$currentPage = $_GET['page'];
 }else{
   $currentPage = 1;
 }
@@ -19,7 +20,7 @@ $query->execute();
 $result = $query->fetch();
 
 $nbArticles = (int) $result['nb_message'];
-$parPage = 10;
+$parPage = 5;
 
 // On calcule le nombre de pages total
 $pages = ceil($nbArticles / $parPage);
@@ -45,7 +46,8 @@ $articles = $query->fetchAll(PDO::FETCH_ASSOC);
       <meta charset="utf-8">
       <title>Panel administrateur</title>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+      
       <link rel="stylesheet" type="text/css" href="../assets/css/panelmsg.css">
    </head>
    <body class="bg-dark">
@@ -55,10 +57,9 @@ $articles = $query->fetchAll(PDO::FETCH_ASSOC);
       <ul class="nav nav-pills">
         
     <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="../view/paneluser.php">Liste des utilisateurs</a>
+    <a class="nav-link active" aria-current="page" href="../view/paneluser.php?page=1">Liste des utilisateurs</a>
     </li>
     <li class="nav-item">
-    <a class="nav-link" href="../view/index.php">Accueil</a>
     </li>
     <li class="nav-item">
     <a class="nav-link" href="../controller/disconect.php">Déconnexion</a>
@@ -90,7 +91,7 @@ $articles = $query->fetchAll(PDO::FETCH_ASSOC);
 <nav aria-label="Page de navigation">
   <ul class="pagination">
   <li class="page-item <?= ($currentPage == 1) ? "disabled" : "" ?>">
-            <a href="./?page=<?= $currentPage - 1 ?>" class="page-link">Précédente</a>
+            <a href="?page=<?= $currentPage - 1 ?>" class="page-link">Précédente</a>
         </li>
         <?php for($page = 1; $page <= $pages; $page++): ?>
             <!-- Lien vers chacune des pages (activé si on se trouve sur la page correspondante) -->

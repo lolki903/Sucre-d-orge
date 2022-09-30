@@ -20,7 +20,7 @@ function callSearch(str){
 }
 
 function searchlink(content,li){;
-    let input = document.getElementById("input")
+    let input = document.getElementById("inputName")
     input.value = content;
     let ul = document.getElementById("result");
     ul.style.display = "none";
@@ -29,7 +29,7 @@ function searchlink(content,li){;
 let names = [];
 let sortedNames = names.sort();
 
-let input = document.getElementById("input");
+let input = document.getElementById("inputName");
 
 input.addEventListener("keyup", (e) => {
 removeElements();
@@ -61,7 +61,7 @@ function removeElements() {
 }
 
 
-showMessageBot("Sucre d'Orge", "Bonjour, a qui souhaites-tu envoyer ton sucre d'orge ? (donne son nom et son prenom)");
+showMessageBot("Sucre d'Orge", "Bonjour "+ Nom +", a qui souhaites-tu envoyer ton sucre d'orge ? (donne son nom et son prenom)");
 let myForm = document.getElementById("myForm");
 let messages = document.getElementById("messages");
 
@@ -70,7 +70,7 @@ let chatState = 1;
 
 function askMessage(userSay) {
     if(userSay.toLowerCase().includes("")) {
-        showMessageBot("Sucre d'Orge", "Super! le destinaire sera super content!");
+        showMessageBot("Sucre d'Orge", " Super! "+ userSay.split('.',1) + " sera super content!");
     }
     showMessageBot("Sucre d'Orge", "Quel message souhaites-tu lui envoyer ?");
 }
@@ -90,13 +90,14 @@ function getFormatedDate() {
     return dateMessage;
 }
 
+
 function showMessageUser(message) {
     let barSendMessages = document.getElementById("barSendMessages");
     let avatarURL = "assets/images/santa.png";
     let dateMessage = getFormatedDate();
 
     let messageUser = document.createElement("div");
-    messageUser.innerHTML = '<div class="messagesRecus col-6"><div class="card"><h5 class="card-header bg-light text-black"><img id="avatarBot" class="col-1 row mt-1 col-1 rounded-circle" src='+avatarURL+' class="img-fluid"><span class="headerText">Moi</span><span class="headerDateHour"> - '+dateMessage+'</span></h5><div class="card-body"><h5 class="card-title"></h5><div id="messages">'+message+'</div></div></div>';
+    messageUser.innerHTML = '<div class="messagesRecus col-6"><div class="card"><h5 class="card-header bg-light text-black"><img id="avatarBot" class="col-1 row mt-1 col-1 rounded-circle" src='+avatarURL+' class="img-fluid"><span class="headerText">Moi</span><span class="headerDateHour"> - '+dateMessage+'</span></h5><div class="card-body"><h5 class="card-title"></h5><div id="messages">'+message.toLowerCase()+'</div></div></div>';
     barSendMessages.appendChild(messageUser);
     window.scrollTo(0,document.body.scrollHeight);
 }
@@ -107,7 +108,7 @@ function showMessageBot(botName, message) {
     let dateMessage = getFormatedDate();
 
     let messageBot = document.createElement("div");
-    messageBot.innerHTML = '<div class="col-6"><div class="card"><h5 class="card-header bg-light" id="headerText"><img id="avatarBot" class="col-1 row mt-1 col-1" src='+avatarURL+' class="img-fluid" alt="hero"><span class="headerText">'+botName+' - </span><span class="headerDateHour">  '+dateMessage+'</span></h5></div><div class="card-body"><p>'+message+'</p></div></div>';
+    messageBot.innerHTML = '<div style="margin-bottom:15px" class="col-6"><div class="card"><h5 class="card-header bg-light" id="headerText"><img id="avatarBot" class="col-1 row mt-1 col-1" src='+avatarURL+' class="img-fluid" alt="hero"><span class="headerText">'+botName+' - </span><span class="headerDateHour">  '+dateMessage+'</span></h5><div class="card-body"><p>'+message.toLowerCase()+'</p></div></div></div>';
     barSendMessages.appendChild(messageBot);
     window.scrollTo(0,document.body.scrollHeight);
 }
@@ -145,9 +146,8 @@ function aide(userSay) {
 
 myForm.addEventListener("submit", function(e) {
     e.preventDefault()
-    let searchBar= document.getElementById("input");
+    let searchBar= document.getElementById("inputName");
     let userSay = searchBar.value;
-    document.getElementById("input").value = "";
 
     if(userSay.length!==0) {
         showMessageUser(userSay);
@@ -155,20 +155,30 @@ myForm.addEventListener("submit", function(e) {
         if(userSay.toLowerCase().includes("aide")) {
         aide();
         } else {
+            let btnName = document.getElementById('btnsubmitName');
+                    let btnMsg = document.getElementById('btnsubmitMessage');
+                    let inputMsg = document.getElementById('inputMessage');
+                    let inputName = document.getElementById('inputName');
+
             switch(chatState) {
                 case 1:
                     askMessage(userSay);
                     chatState = 2;
-                    let input = document.getElementById('input');
-                    let form = document.getElementById('myForm');
+                
+                    inputName.style.display = "none";
+                    inputMsg.style.display ="block";
+                    btnName.style.display = "none";
+                    btnMsg.style.display = "block";
+                    myForm.method="POST";
+                    myForm.action="controller/message.php";
+
                     input.onkeyup = "";
-                   // myForm.action ="/controller/message.php";
                     break;
                 case 2:
                     messageUser(userSay);
                     chatState = 3;
-                    var btn = document.getElementById('btnsubmit');
-                    //myForm.action ="/controller/message.php";
+
+                    inputMsg.attr.placeholder  ="Votre message";
                     //console.log(input.value);
                     btn.remove();
                     break;
@@ -179,3 +189,5 @@ myForm.addEventListener("submit", function(e) {
         }
     }
 })
+
+

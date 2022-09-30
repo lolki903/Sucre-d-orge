@@ -31,23 +31,33 @@ if(empty($_POST['form_prenom']))
 
 if(empty($_POST['form_email']))
 	$_POST['form_email']=null;
-
+// 	$carac_interdits[] = array('@', '/','$') ; 
+// $traitement = 1 ;
+// $erreur = 0 ;
+// foreach($carac_interdits as $traitement) {
+//   $position = strpos($message_temporaire, 1) ; 
+//   if ($position !== FALSE) {
+//     echo 'Erreur : Vous ne pouvez pas utiliser le caractère    <strong>'.$traitement.'</strong> <br />' ;
+//    $erreur = 1 ;
+//  } 
+// } 
+// if($erreur == 0){
 //variable pour inserer les elements dans la base de données puis association de l'input avec la donné  voulu
-$add=$db->prepare('INSERT INTO user ( lastname, firstname, email, password, type) VALUES ( :l, :f, :e, :p, :j)');
+$add=$db->prepare('INSERT INTO user ( lastname, firstname, email, password, type) VALUES ( :l, :f, :e, :p, :j) ') ;
 
 $add->execute([
 ':l'=>$_POST['form_nom'],
 ':f'=>$_POST['form_prenom'],
-':e'=>$_POST['form_email'].'@my-digital-school.org',
+':e'=>$_POST['form_prenom'].".".$_POST['form_nom'].'@my-digital-school.org',
 ':p'=>crypt_password($_POST['form_motdepasse']),
 ':j'=> 0
 ]);
 
-
+$email = $_POST['form_prenom'].".".$_POST['form_nom'];
 	//variable pour lire les elements dans la base de données puis association de l'input avec les données  voulu
 	$search =$db->prepare('SELECT * FROM user WHERE email = :u AND password = :p');
 	$search->execute([
-		':u'=>$_POST['form_email'].'@my-digital-school.org',
+		':u'=>$email.'@my-digital-school.org',
 		':p'=>crypt_password($_POST['form_motdepasse']),
 	]);
 	//Si la variaable search ne contient aucune ligne alors une error si produira
@@ -60,6 +70,7 @@ $add->execute([
 		$_SESSION['lastname'] = $data['lastname'];
 		$_SESSION['firstname'] = $data['firstname'];
 		$_SESSION['type'] = $data['type'];
+		$_SESSION['sended'] = 0;
 	}
 
 
