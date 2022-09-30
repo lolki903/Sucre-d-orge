@@ -20,7 +20,7 @@ function searchHeb($db,$name){
 			else{
 				
 				while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-					echo "<li class='list-items' onclick='searchlink(this.textContent,this)' style='cursor: pointer;'> <b>". substr($row['lastname'],0,1)."</b>".substr($row['lastname'],1)."-<b>".substr($row['firstname'],0,1)."</b>".substr($row['firstname'],1) ."</li>";
+					echo "<li class='list-items' onclick='searchlink(this.textContent,this)' style='cursor: pointer;'> <b>". substr($row['lastname'],0,1)."</b>".substr($row['lastname'],1).".<b>".substr($row['firstname'],0,1)."</b>".substr($row['firstname'],1) ."</li>";
 				}
 			
 			}

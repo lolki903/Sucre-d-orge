@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -31,7 +29,28 @@
 		<div class="row justify-content-center text-center p-5">
 			<div class="card" style="width: 48rem;">
 					<div class="card-header">Se connecter</div>
-						<input class="form-control" type="text" name="form_email" placeholder="Email" required>
+					<div class="row">
+					<div class="col">
+					<div class="input-group mb-2">
+					
+					<input class="form-control" type="text" name="form_nom" placeholder="Nom" required>
+					<div class="input-group-prepend">
+					<div class="input-group-text">.</div>
+					</div>
+
+					<input class="form-control" type="text" name="form_prenom" placeholder="Prénom" required>
+					
+					<div class="input-group-prepend">
+					<div class="input-group-text">@</div>
+					</div>
+					<input class="form-control" disabled type="text" name="form_nom" placeholder="@my-digital-school.org" required>
+					</div>
+
+						</div>
+						
+
+
+					</div>
 						<input class="form-control" type="password" name="form_motdepasse" placeholder="Mot de passe" required>
 			</div>
 		</div>

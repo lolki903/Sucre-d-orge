@@ -10,10 +10,12 @@ if (empty($_POST)) {
 
 	flash_in('error','Non !');
 }else{
+	//DERNIERE
+	$email =$_POST['form_nom'].".".$_POST['form_prenom'];
 	//variable pour lire les elements dans la base de données puis association de l'input avec la donné  voulu
-	$search =$db->prepare('SELECT * FROM user WHERE email = :u AND password = :p');
+	$search =$db->prepare('SELECT * FROM user WHERE email = :u AND password = :p');//INSERT INTO user ( lastname, firstname, email, password, type) VALUES ( :l, :f, :e, :p, :j) '
 	$search->execute([
-		':u'=>$_POST['form_email'].'@my-digital-school.org',
+		':u'=>$email.'@my-digital-school.org',
 		':p'=>crypt_password($_POST['form_motdepasse']),
 	]);
 	//Si les inforlation ne sont pas inscrit dans la base de donnée
@@ -22,6 +24,18 @@ if (empty($_POST)) {
 		$error=true;
 
 	}else{
+		// VERIFICATION SI LE USER A DEJA ENVOYÉ UN MESSAGE OU PAS
+		$verif = $db->prepare('SELECT * FROM trades WHERE sender = :email');
+		$verif->execute([':email'=>$email.'@my-digital-school.org']);
+
+		if ($verif->rowcount() == 0) {
+		// SI OUI LA SESSION VAUT TRUE  
+			$_SESSION['sended'] = 2;
+
+		}else{ //SINON ELLE VAUT FALSE
+			$_SESSION['sended'] = 1;
+		}
+
 		//Sinon cration de la variable data qui aura pour function de chercher les information demander dans la base de donnée
 		$data =$search->fetch(PDO::FETCH_ASSOC);
 
@@ -29,6 +43,7 @@ if (empty($_POST)) {
 		$_SESSION['lastname'] = $data['lastname'];
 		$_SESSION['firstname'] = $data['firstname'];
 		$_SESSION['type'] = $data['type'];
+
 	}
 }
 //Si une erreur se produit pendant le script redirection immédiat vers la page login
