@@ -37,7 +37,7 @@
 					<div class="input-group-prepend">
 					<div class="input-group-text">.</div>
 					</div>
-					
+
 					<input class="form-control" type="text" name="form_prenom" placeholder="Prénom" required>
 					
 					<div class="input-group-prepend">
@@ -56,8 +56,8 @@
 		</div>
 	</div>
 	<div class="row justify-content-center">
-	<button type="button"  class="btn btn-light btn-lg" style="z-index:50; text-decoration: none" required> <a href="adduser.php">	Je m'inscris</a></button>
-	  <button type="submit" name="valider" class="btn btn-light btn-lg" style="z-index:50" required>Je me connecte</button>
+		<button type="submit" name="valider" class="btn btn-light btn-lg" required><a href="adduser.php">Je m'inscris</a></button>
+	  <button type="submit" name="valider" class="btn btn-light btn-lg" required>Je me connecte</button>
 	</div>
   </form>			
   <p> <?php if(isset($message) !== "" || isset($message) !== null){echo $message;}else{} ?></p>
