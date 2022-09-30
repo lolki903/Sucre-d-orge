@@ -61,11 +61,24 @@ if($_SESSION['type'] === 1){
         <?php      
         
                 if($_SESSION['sended'] === 1){ ?>
+                <section>
+    <div class="snow1"></div>
+    <div class="snow2"></div>
+    <div class="snow3"></div>
+	<div class="snow4"></div>
+	<div class="snow5"></div>
+	<div class="snow6"></div>
+</section>
                 <div class="container">
 
+<<<<<<< HEAD
                 <div class="alert alert-danger alert-dismissible text-center">
+=======
+                <div class="alert alert-danger">
 
-                <strong>Ceci n'est plus disponible.</strong> Vous avez déjà envoyer un message.
+>>>>>>> 64a97edb961560151070a2f67cadeda62240b9eb
+
+                <strong class="center">Ceci n'est plus disponible.</strong> Vous avez déjà envoyer un message.
 
                 </div>
 
