@@ -33,12 +33,12 @@
 					<div class="col">
 					<div class="input-group mb-2">
 					
-					<input class="form-control" type="text" name="form_nom" placeholder="Nom" required>
+					<input class="form-control" type="text" pattern="[a-zA-Z]+" name="form_nom" placeholder="Nom" required>
 					<div class="input-group-prepend">
 					<div class="input-group-text">.</div>
 					</div>
 
-					<input class="form-control" type="text" name="form_prenom" placeholder="Prénom" required>
+					<input class="form-control" type="text" pattern="[a-zA-Z]+" name="form_prenom" placeholder="Prénom" required>
 					
 					<div class="input-group-prepend">
 					<div class="input-group-text">@</div>
@@ -51,7 +51,7 @@
 
 
 					</div>
-						<input class="form-control" type="password" name="form_motdepasse" placeholder="Mot de passe" required>
+						<input class="form-control" type="password" name="form_motdepasse" pattern="[a-zA-Z]+" placeholder="Mot de passe" required>
 			</div>
 		</div>
 	</div>

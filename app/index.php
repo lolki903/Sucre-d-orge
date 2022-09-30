@@ -83,8 +83,8 @@ if($_SESSION['type'] === 1){
                 <div class="typing-message row">
                     <div class="col-9">
                         <div class="input-group mb-3 center justify-content-left">
-                            <input type="text" name="receiver" class="TxtName" id="inputName" onkeyup='callSearch(this.value)' placeholder="Votre destinataire" value="" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                            <input type="text" name="message" class="TxtMsg" id="inputMessage" placeholder="Votre message" value="" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <input type="text" pattern="[a-zA-Z]+" name="receiver" class="TxtName" id="inputName" onkeyup='callSearch(this.value)' placeholder="Votre destinataire" value="" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <input type="text" pattern="[a-zA-Z]+" name="message" class="TxtMsg" id="inputMessage" placeholder="Votre message" value="" aria-label="Recipient's username" aria-describedby="basic-addon2">
                             <input type="submit" id="btnsubmitName" class="btn btn-light btnName"/>
                             <input type="submit" id="btnsubmitMessage" name="valider" onclick="myForm.submit()" class="btn btn-light btnMsg"/>
                         </div>
