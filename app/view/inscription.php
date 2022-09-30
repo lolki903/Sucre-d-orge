@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="../assets/css/inscription.css">
 
+
 	<title>Créer un compte</title>
 </head>
 <body class="bg-danger">
@@ -32,12 +33,12 @@
 					<div class="col">
 					<div class="input-group mb-2">
 					
-					<input class="form-control" type="text" name="form_prenom"  pattern="[a-zA-Z]+" placeholder="Prénom" required>
+					<input class="form-control" type="text" name="form_prenom"  pattern="[a-z]+" title="Uniquement des lettres minuscules" placeholder="Prénom" required>
 					<div class="input-group-prepend">
 					<div class="input-group-text">.</div>
 					</div>
 					
-					<input class="form-control" type="text" name="form_nom" pattern="[a-zA-Z]+"  placeholder="Nom" required>
+					<input class="form-control" type="text" name="form_nom" pattern="[a-z]+" title="Uniquement des lettres minuscules" placeholder="Nom" required>
 					
 					<div class="input-group-prepend">
 					<div class="input-group-text">@</div>
@@ -51,7 +52,7 @@
 
 					</div>
 						<input class="form-control frfrr" type="hidden" name="form_email" value="Adresse mail" required>
-						<input class="form-control" type="password" name="form_motdepasse" placeholder="Mot de passe" required>
+						<input class="form-control" type="password" name="form_motdepasse"  placeholder="Mot de passe" required>
 						<input class="form-control" type="password" name="form_motdepasses" placeholder="Repeter le Mot de passe" required>
 			</div>
 		</div>

@@ -33,12 +33,12 @@
 					<div class="col">
 					<div class="input-group mb-2">
 					
-					<input class="form-control" type="text" name="form_nom" placeholder="Nom" required>
+					<input class="form-control" type="text" pattern="[a-z]+" title="Uniquement des lettres minuscules" name="form_nom" placeholder="Nom" required>
 					<div class="input-group-prepend">
 					<div class="input-group-text">.</div>
 					</div>
 
-					<input class="form-control" type="text" name="form_prenom" placeholder="Prénom" required>
+					<input class="form-control" type="text" pattern="[a-z]+" title="Uniquement des lettres minuscules" name="form_prenom" placeholder="Prénom" required>
 					
 					
 					<input class="form-control" disabled type="text" name="form_nom" placeholder="@my-digital-school.org" required>
