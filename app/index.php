@@ -19,18 +19,6 @@ if($_SESSION['type'] === 1){
 
 ?>
 
-<!doctype html>
-<html>
-<head>
-    <meta>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css">
-  <link rel="stylesheet" type="text/css" href="assets/css/chat.css">
-  <script>
-        var Nom = <?php echo json_encode($_SESSION['firstname']); ?>;
-    </script>
-  
-</head>
 <body class="bg-danger">
     <div id="app" class="container-fluid">
         <!--navbar-->
@@ -83,8 +71,8 @@ if($_SESSION['type'] === 1){
                 <div class="typing-message row">
                     <div class="col-9">
                         <div class="input-group mb-3 center justify-content-left">
-                            <input type="text" pattern="[a-zA-Z]+" name="receiver" class="TxtName" id="inputName" onkeyup='callSearch(this.value)' placeholder="Votre destinataire" value="" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                            <input type="text" pattern="[a-zA-Z]+" name="message" class="TxtMsg" id="inputMessage" placeholder="Votre message" value="" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <input type="text" pattern="[a-zA-Z]+" name="receiver" class="TxtName" id="inputName" onkeyup='callSearch(this.value)' placeholder="Votre destinataire" value="" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
+                            <input type="text" pattern="[a-zA-Z0-9]" name="message" class="TxtMsg" id="inputMessage" placeholder="Votre message" value="" aria-label="Recipient's username" aria-describedby="basic-addon2">
                             <input type="submit" id="btnsubmitName" class="btn btn-light btnName"/>
                             <input type="submit" id="btnsubmitMessage" name="valider" onclick="myForm.submit()" class="btn btn-light btnMsg"/>
                         </div>

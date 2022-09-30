@@ -5,6 +5,7 @@ require_once("requests.php");
 function searchHeb($db,$name){
 	
 	$name = $_GET['name'];
+	
 	$req="SELECT lastname,firstname,email FROM `user` WHERE `firstname` like '%$name%' OR `lastname` like '%$name%'";
 	$stmt = $db->prepare($req);
 				$stmt->execute();

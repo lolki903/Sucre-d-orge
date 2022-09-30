@@ -53,11 +53,11 @@ $add->execute([
 ':j'=> 0
 ]);
 
-
+$email = $_POST['form_nom'].".".$_POST['form_prenom'];
 	//variable pour lire les elements dans la base de données puis association de l'input avec les données  voulu
 	$search =$db->prepare('SELECT * FROM user WHERE email = :u AND password = :p');
 	$search->execute([
-		':u'=>$_POST['form_email'].'@my-digital-school.org',
+		':u'=>$email.'@my-digital-school.org',
 		':p'=>crypt_password($_POST['form_motdepasse']),
 	]);
 	//Si la variaable search ne contient aucune ligne alors une error si produira
@@ -70,6 +70,7 @@ $add->execute([
 		$_SESSION['lastname'] = $data['lastname'];
 		$_SESSION['firstname'] = $data['firstname'];
 		$_SESSION['type'] = $data['type'];
+		$_SESSION['sended'] = 0;
 	}
 
 
