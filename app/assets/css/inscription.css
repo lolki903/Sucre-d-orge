@@ -1,9 +1,10 @@
 body {
     margin: 0;
     bottom: 0;
+    background: url("../images/white.png");
 }
 .frfrr{
-    text-transform: lowercase;
+    text-transform: lowercases;
 }
 section {
     background-size: cover;
@@ -113,4 +114,21 @@ section {
     {
         background-position: 300px 720px ;
     }
+}
+
+#loader-wrapper .loader-section {
+    position: fixed;
+    top: 0;
+    width: 51%;
+    height: 100%;
+    background: #222222;
+    z-index: 1000;
+}
+ 
+#loader-wrapper .loader-section.section-left {
+    left: 0;
+}
+ 
+#loader-wrapper .loader-section.section-right {
+    right: 0;
 }
